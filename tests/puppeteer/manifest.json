@@ -1,0 +1,308 @@
+[
+  {
+    "scenario": "01_chargement_carnet",
+    "preconditions": "Partie neuve, acte 0; personnage lettré",
+    "command": "PZPuppet.runFile(\"OperationArtemis/01_chargement_carnet.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Carnet réel lu, acte I, relecture idempotente et journal visible",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/01_chargement_carnet.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "02_signal_radio",
+    "preconditions": "Après 01, acte I; personnage non sourd",
+    "command": "PZPuppet.runFile(\"OperationArtemis/02_signal_radio.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Radio éteinte/mauvaise fréquence sans progression; réception ART1 réelle puis bunker",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/02_signal_radio.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "03_bunker",
+    "preconditions": "Après 02, ch1_bunker",
+    "command": "PZPuppet.runFile(\"OperationArtemis/03_bunker.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Transfert badge et ordres depuis le dépôt, lecture, chapitre clinique",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/03_bunker.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "04_clinique",
+    "preconditions": "Après 03, ch2_clinic",
+    "command": "PZPuppet.runFile(\"OperationArtemis/04_clinique.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Dossier patient pris dans le classeur et lu, chapitre relais",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/04_clinique.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "05_relais",
+    "preconditions": "Après 04, ch3_relay; réseau actif ou générateur connecté alimentant la salle",
+    "command": "PZPuppet.runFile(\"OperationArtemis/05_relais.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Miller vivant naturellement posé et identifiant concordant au registre; registre lu; bande interrompue refusée; écoute complète réelle, indicatif7149 et prochain chapitre.",
+    "observed": "Moteur passed; 36étapes, 0 nouvelle erreur Lua; Miller naturel vivant, profil/identifiant concordants; texte radio lisible confirmé par le joueur.",
+    "proof": "reports/05_relais.md",
+    "status": "réussi",
+    "executed": true,
+    "scope": "Nouvelle version36étapes : préparation40cases, observation physique de Miller avant son registre. Ancienne preuve0/1 conservée; mort/carte, virtualisation, MP et couleur rendue restent distincts."
+  },
+  {
+    "scenario": "06_base_acces_capteurs",
+    "preconditions": "ch5_base après relais ou labo optionnel",
+    "command": "PZPuppet.runFile(\"OperationArtemis/06_base_acces_capteurs.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Real guard card and plan; hall sensor windows; actual forceLocked sas door opened with the card. Exterior entry excluded.",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner. Hall placement is debug preparation. Natural exterior entry remains untested.",
+    "proof": "reports/06_base_acces_capteurs.md",
+    "status": "réussi",
+    "executed": true,
+    "scope": "Hall placement is debug preparation. Natural exterior entry remains untested."
+  },
+  {
+    "scenario": "07_archives_portique",
+    "preconditions": "ch5_base, carte en inventaire, aucune évasion antérieure",
+    "command": "PZPuppet.runFile(\"OperationArtemis/07_archives_portique.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Dossier du classeur, acte III; sortie à pied des archives lance alarme et évasion",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/07_archives_portique.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "08_evasion",
+    "preconditions": "Après 07, dossier porté, évasion active, z=-17",
+    "command": "PZPuppet.runFile(\"OperationArtemis/08_evasion.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Remontée réelle par escaliers, sortie avec dossier, évasion done et sirène éteinte",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/08_evasion.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "09_appel_helicoptere",
+    "preconditions": "Après 08; sans transport Military Drop; stérilisation désactivée",
+    "command": "PZPuppet.runFile(\"OperationArtemis/09_appel_helicoptere.lua\",{playerIndex=0},{testSave=\"PZPuppet_Artemis_Helicoptere\"})",
+    "expected": "Appel depuis le menu radio réel accepté; première caisse annoncée près hélicoptère",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/09_appel_helicoptere.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "10_fin_helicoptere",
+    "preconditions": "Après 09; vitesse normale; durée de journée relevée; équipement de survie",
+    "command": "PZPuppet.runFile(\"OperationArtemis/10_fin_helicoptere.lua\",{playerIndex=0,manualStop=false},{testSave=\"PZPuppet_Artemis_Helicoptere\"})",
+    "expected": "Approche, tenue sans saut de temps, atterrissage, marche/10s embarquement, fin B puis Continuer",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/10_fin_helicoptere.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "11_appel_passeur",
+    "preconditions": "Acte III obtenu normalement sur une AUTRE partie; sans mods bateau",
+    "command": "PZPuppet.runFile(\"OperationArtemis/11_appel_passeur.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Refus avec projecteurs; vraie extinction du générateur Kinsella; appel accepté au quai",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/11_appel_passeur.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "12_fin_passeur",
+    "preconditions": "Après 11; vitesse normale; durée de journée relevée; équipement de survie",
+    "command": "PZPuppet.runFile(\"OperationArtemis/12_fin_passeur.lua\",{playerIndex=0,manualStop=false},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Approche et tenue réelles, ponton/10s embarquement, fin A/ferry puis Continuer",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/12_fin_passeur.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "13_entree_checkpoint",
+    "preconditions": "Acte III obtenu normalement; sans Vaccine, non infecté; dossier selon variante",
+    "command": "PZPuppet.runFile(\"OperationArtemis/13_entree_checkpoint.lua\",{playerIndex=0},{testSave=\"PZPuppet_Artemis_Negatifs\"})",
+    "expected": "Vrai test de la caisse, portail déverrouillé puis ouvert par action, entrée réelle et durée 1h avec ou sans dossier",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/13_entree_checkpoint.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "14_fin_checkpoint",
+    "preconditions": "Après 13; quarantaine running, dossier, non infecté; nourriture/eau, rester éveillé",
+    "command": "PZPuppet.runFile(\"OperationArtemis/14_fin_checkpoint.lua\",{playerIndex=0,manualStop=false},{testSave=\"PZPuppet_Artemis_Negatifs\",completedQuarantine=true})",
+    "expected": "Détenu relevé à 30 minutes, 1h réelle de jeu, test final, marche au nord du barrage, fin C",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner. Quarantaine de 1h achevée naturellement avant lancement; ce run valide la traversée et la fin. Voir preuve séparée de l’intervalle.",
+    "proof": "reports/14_fin_checkpoint.md",
+    "status": "réussi",
+    "executed": true,
+    "scope": "Quarantaine achevée avant démarrage; intervalle documenté dans reports/QUARANTAINE-UNE-HEURE.md. Dégagement de 6 zombies à la vraie victoire enregistré; contrôle géométrique exhaustif non répété."
+  },
+  {
+    "scenario": "15_fleuve_ouest",
+    "preconditions": "Acte III avec dossier; BoatCore/WorkingMotorboat ou Aquatsar; commandes manuelles",
+    "command": "PZPuppet.runFile(\"OperationArtemis/15_fleuve_ouest.lua\",{playerIndex=0,manualStop=false})",
+    "expected": "Embarquer et piloter réellement via Kinsella éclairé jusqu’à x<=20, y=4800..5118; fin A/west",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/15_fleuve_ouest.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "16_fleuve_nord_est",
+    "preconditions": "Acte III avec dossier; bateau du bassin Louisville; commandes manuelles",
+    "command": "PZPuppet.runFile(\"OperationArtemis/16_fleuve_nord_est.lua\",{playerIndex=0,manualStop=false})",
+    "expected": "Piloter réellement via poste est éclairé jusqu’à x>=19780,y<=299; fin A/northeast",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/16_fleuve_nord_est.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "17_refus_radio_serveur",
+    "preconditions": "Acte III, dossier, appel B jamais accepté, transport Artemis, hors quai passeur",
+    "command": "PZPuppet.runFile(\"OperationArtemis/17_refus_radio_serveur.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Menus grisés; serveur refuse fréquence incorrecte et radio éteinte; micro contrôlé côté client seulement",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/17_refus_radio_serveur.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "18_rendez_vous_manque",
+    "preconditions": "Appel B accepté, transport Artemis; aucune fin",
+    "command": "PZPuppet.runFile(\"OperationArtemis/18_rendez_vous_manque.lua\",{playerIndex=0})",
+    "expected": "Attente réelle hors cercle: départ sans joueur et appel quotidien conservé",
+    "observed": "Correctif MOD-09 appliqué sur autorisation; tests hors jeu réussis. Appels et fins avec nouveau code non exécutés; archives du refus antérieur conservées.",
+    "proof": "reports/RADIO-FIX-20261004.md",
+    "status": "non exécuté",
+    "executed": false
+  },
+  {
+    "scenario": "19_sterilisation",
+    "preconditions": "Acte III, dossier NON LU, SterilizationDays=1 dès création; pas de fin",
+    "command": "PZPuppet.runFile(\"OperationArtemis/19_sterilisation.lua\",{playerIndex=0})",
+    "expected": "Lecture réelle déclenche délai, échéance inchangée atteinte naturellement, B/C fermées, A ouverte",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/19_sterilisation.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "20_labo_optionnel",
+    "preconditions": "Après 05 si ch4_lab; Tikitown et dépendances présents dès création",
+    "command": "PZPuppet.runFile(\"OperationArtemis/20_labo_optionnel.lua\",{playerIndex=0})",
+    "expected": "Notes de V ramassées/lues au -4; passage à ch5_base",
+    "observed": "Saut explicite du lot passeur : Tikitown non activé, chapitre satellite non sélectionné. Aucun objectif20 exécuté.",
+    "proof": "reports/PASSEUR-20261004.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "21_computer_contenus",
+    "preconditions": "Clinique déjà révélée, ComputerModkum; CD Artemis encore au classeur",
+    "command": "PZPuppet.runFile(\"OperationArtemis/21_computer_contenus.lua\",{playerIndex=0})",
+    "expected": "CD posé par le mod avec 3 notes; option laptop=true vérifie aussi portable des archives",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/21_computer_contenus.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "22_siege_optionnel",
+    "preconditions": "Acte III, dossier NON LU, Siege Night actif et contrôle Artemis",
+    "command": "PZPuppet.runFile(\"OperationArtemis/22_siege_optionnel.lua\",{playerIndex=0})",
+    "expected": "Lecture réelle annonce siège; aucune modification de ses options sandbox",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/22_siege_optionnel.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "23_vaccine_entree",
+    "preconditions": "Acte III, Vaccine actif, personnage non infecté; test manuel au spectromètre",
+    "command": "PZPuppet.runFile(\"OperationArtemis/23_vaccine_entree.lua\",{playerIndex=0,manualStop=false})",
+    "expected": "Vrai prélèvement et analyse via UI Vaccine donnent autorisation cleared au poste",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/23_vaccine_entree.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "24_checkpoint_abandon",
+    "preconditions": "Quarantaine running; aucune fin; variante destructive de la partie dédiée",
+    "command": "PZPuppet.runFile(\"OperationArtemis/24_checkpoint_abandon.lua\",{playerIndex=0})",
+    "expected": "Menu réel quitter, entrée effacée, portail déverrouillé, sortie sans fausse victoire",
+    "observed": "Nouvelle durée 1h préparée; validation en jeu après redémarrage requise. Rapports de l’ancien code conservés séparément.",
+    "proof": "reports/QUARANTAINE-UNE-HEURE.md",
+    "status": "non exécuté",
+    "executed": false
+  },
+  {
+    "scenario": "25_sauvegarde_rechargee",
+    "preconditions": "Après 31 puis sauvegarde dédiée et rechargement de la même partie; fermeture complète du processus à relever séparément.",
+    "command": "PZPuppet.runFile(\"OperationArtemis/25_sauvegarde_rechargee.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Acte/chapitre/évasion/fin conservés; révision augmente à initialisation; Continuer sans nouvel écran",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner. Conservation comparée à la référence31 de la même partie; fermeture complète du processus à attester séparément, sans la déduire des assertions Lua.",
+    "proof": "reports/25_sauvegarde_rechargee.md",
+    "status": "réussi",
+    "executed": true,
+    "scope": "Conservation comparée à la référence31 de la même partie; fermeture complète du processus à attester séparément, sans la déduire des assertions Lua."
+  },
+  {
+    "scenario": "26_checkpoint_positif",
+    "preconditions": "Acte III; sans Vaccine; personnage de test réellement infecté, voie non ouverte",
+    "command": "PZPuppet.runFile(\"OperationArtemis/26_checkpoint_positif.lua\",{playerIndex=0},{testSave=\"PZPuppet_Artemis_Negatifs\",infectionFixture=true})",
+    "expected": "Test réel positif, refus, aucune voie ouverte ni victoire",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/26_checkpoint_positif.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "27_appel_sans_dossier",
+    "preconditions": "Acte III, dossier déposé par vraie action, appel B jamais accepté",
+    "command": "PZPuppet.runFile(\"OperationArtemis/27_appel_sans_dossier.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\",depositDossier=true})",
+    "expected": "Callback radio réel refuse extraction sans dossier",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/27_appel_sans_dossier.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "28_autorisation_expiree",
+    "preconditions": "Acte III, non infecté, sans Vaccine, aucune entrée précédente; vrai test au poste puis rester dehors",
+    "command": "PZPuppet.runFile(\"OperationArtemis/28_autorisation_expiree.lua\",{playerIndex=0},{testSave=\"PZPuppet_Artemis_Negatifs\"})",
+    "expected": "Autorisation obtenue par menu réel puis expiration naturelle à 60 min de jeu; portail reverrouillé; ni quarantaine ni victoire",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/28_autorisation_expiree.md",
+    "status": "réussi",
+    "executed": true
+  },
+  {
+    "scenario": "29_fin_checkpoint_sans_dossier",
+    "preconditions": "Quarantaine 1h commencée sans dossier; non infecté; partie distincte",
+    "command": "PZPuppet.runFile(\"OperationArtemis/29_fin_checkpoint_sans_dossier.lua\",{playerIndex=0,manualStop=false})",
+    "expected": "1h réelle de jeu et franchissement du pont: Cnodossier",
+    "observed": "Nouvelle durée 1h préparée; validation en jeu après redémarrage requise. Rapports de l’ancien code conservés séparément.",
+    "proof": "reports/QUARANTAINE-UNE-HEURE.md",
+    "status": "non exécuté",
+    "executed": false
+  },
+  {
+    "scenario": "30_fin_checkpoint_remede",
+    "preconditions": "Quarantaine 1h, dossier et seringue de remède authentique en inventaire",
+    "command": "PZPuppet.runFile(\"OperationArtemis/30_fin_checkpoint_remede.lua\",{playerIndex=0})",
+    "expected": "Fin C avec hasCure=true; ne valide pas fabrication/administration du remède",
+    "observed": "Aucune exécution en jeu dans cette campagne.",
+    "proof": "reports/30_fin_checkpoint_remede.md",
+    "status": "non exécuté"
+  },
+  {
+    "scenario": "31_reference_rechargement",
+    "preconditions": "État stable d’une partie dédiée; avant sauvegarde et redémarrage complets",
+    "command": "PZPuppet.runFile(\"OperationArtemis/31_reference_rechargement.lua\",{playerIndex=0,manualStop=true},{testSave=\"PZPuppet_Artemis_Passeur\"})",
+    "expected": "Référence réelle de progression écrite sous Lua/PZPuppet, aucune modification de sauvegarde",
+    "observed": "Moteur passed; 0 nouvelles erreurs à examiner.",
+    "proof": "reports/31_reference_rechargement.md",
+    "status": "réussi",
+    "executed": true
+  }
+]

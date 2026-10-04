@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "Journal: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis (debug)",
+    "ContextMenu_Artemis_DebugStart": "Start the operation",
+    "ContextMenu_Artemis_DebugAdvance": "Go to the next act",
+    "ContextMenu_Artemis_DebugReset": "Reset the state",
+    "ContextMenu_Artemis_DebugGiveNote": "Receive the Artemis notebook",
+    "ContextMenu_Artemis_DebugCompleteChapter": "Complete the current chapter",
+    "ContextMenu_Artemis_DebugGoToChapter": "Go to the chapter location",
+    "ContextMenu_Artemis_DebugGoToSite": "Go to the chapter drop point",
+    "ContextMenu_Artemis_CallExtraction": "Call for evacuation (radio)",
+    "ContextMenu_Artemis_DebugGoToLanding": "Go to the landing zone",
+    "ContextMenu_Artemis_CheckpointTest": "Take the blood test (army)",
+    "ContextMenu_Artemis_CallFerry": "Call the ferryman (radio)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "Go to the checkpoint (Clark Memorial Bridge)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "Go to the Kinsella bridge post",
+    "ContextMenu_Artemis_DebugGoToFerry": "Go to the ferryman's dock (Brandenburg)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "Go to V's boat (Riverside)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "Go to V's boat (Louisville)",
+    "ContextMenu_Artemis_CheckpointLeave": "Ask to leave the pen (abandon the quarantine)"
+}

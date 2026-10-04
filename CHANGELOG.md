@@ -1,0 +1,52 @@
+# Changelog
+
+This changelog starts with the initial repository snapshot. Earlier development
+is summarized below rather than reconstructed as separate releases.
+
+## 0.1.0 — 2026-10-04
+
+Initial development snapshot for Project Zomboid Build 42.21; not a Steam
+Workshop release.
+
+### Added
+
+- A story-driven end-game investigation across Knox County, starting with a
+  notebook found on military infected and the ARTEMIS broadcast on 108.0 MHz.
+- A bunker, clinic, radio relay and secret base investigation with readable
+  evidence, journal entries, map reveals, security access and a laboratory escape.
+- Helicopter, ferryman and checkpoint evacuation routes, plus optional routes
+  using supported boat mods.
+- A victory screen, chronicle and route-specific epilogues with French and
+  English narration and music.
+- An optional sterilization countdown and sandbox settings for discovery,
+  intensity and extraction timing.
+- Signal Smoke support as a required dependency, and optional integrations
+  documented in the project.
+- Workshop artwork, descriptions in eleven languages, production sources and
+  a 31-scenario PZPuppeteer test campaign.
+
+### Fixed and adjusted during development
+
+- Valid military radio calls now reach the helicopter and ferryman evacuation
+  services instead of being rejected as a missing device.
+- Checkpoint quarantine lasts at most one in-game hour, with an incident at
+  thirty minutes, whether or not the player carries the dossier.
+- Relay guard Miller placement and radio text readability were corrected and
+  checked in the recorded singleplayer campaign.
+- The initial ending screen clears nearby loaded zombies on the same floor in
+  singleplayer; reopening the ending from the journal does not repeat this action.
+
+### Validation and known limits
+
+- Existing campaign records report successful singleplayer helicopter, ferryman
+  and checkpoint endings on Build 42.21. They also record ending persistence
+  after complete game restarts for helicopter and ferryman.
+- These records cover their stated test conditions. Debug placement used in
+  preparation does not validate natural access to every location; the exterior
+  entrance to the secret base remains outside that coverage.
+- Multiplayer, boat routes, optional integrations, a missed extraction,
+  the full sterilization countdown and several alternate checkpoint branches
+  still require dedicated in-game validation.
+- See [campaign results](tests/puppeteer/RESULTATS.md) for scenario coverage and
+  [test instructions](tests/puppeteer/README.md) for reproduction procedures.
+  Raw local reports are excluded from Git by the existing `.gitignore`.

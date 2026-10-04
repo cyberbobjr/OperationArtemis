@@ -1,0 +1,44 @@
+[h1]Operation Artemis[/h1]
+
+[b]Survivre n’était que le début.[/b]
+
+Un carnet récupéré sur un infecté militaire. Une émission codée. Un certain V. Suivez les indices à travers Knox County, découvrez ce que cache l’opération Artemis et trouvez une sortie de la zone d’exclusion.
+
+[h2]SUIVEZ LE SIGNAL[/h2]
+
+Lisez le carnet, réglez une radio militaire et écoutez. L’enquête commence au cœur de votre partie : documents, indices et lieux vous révèlent progressivement votre prochain objectif.
+
+[h2]REMONTEZ LA PISTE[/h2]
+
+Explorez un bunker abandonné, une clinique, un relais radio et une base souterraine secrète. Récupérez les preuves, rétablissez le courant quand il le faut et déchiffrez la piste laissée par V. Prendre le dossier n’est que le début de votre évasion.
+
+[h2]SORTEZ VIVANT[/h2]
+
+Une alarme peut transformer une fouille tranquille en remontée désespérée hors du laboratoire. Choisissez ensuite votre sortie : évacuation par hélicoptère, fleuve et passeur, ou checkpoint. Chaque route possède ses conditions et sa fin.
+
+[h2]CE QUI CHANGE VOTRE PARTIE[/h2]
+
+[list]
+[*]Une enquête intégrée au monde existant, des documents à lire et un journal qui conserve vos découvertes.
+[*]Un danger qui a un sens : courant, alarmes, accès sécurisés et évasion du laboratoire.
+[*]Plusieurs routes d’exfiltration, un panneau de victoire et des épilogues liés à votre sortie.
+[*]Un compte à rebours de stérilisation facultatif et des options de bac à sable pour la découverte, l’intensité et les délais d’extraction.
+[/list]
+
+[h2]COMMENCEZ L’ENQUÊTE[/h2]
+
+Activez Operation Artemis et [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Trouvez le carnet Artemis sur les infectés militaires et lisez-le. Les indices vous guideront ; le départ de l’enquête ne demande aucune commande debug.
+
+[h2]BUILD ET LANGUES[/h2]
+
+Project Zomboid 42.21. Routes principales hélicoptère, passeur et checkpoint testées en solo. Multijoueur et intégrations optionnelles restent à valider séparément. Textes du récit et fins doublées : français et anglais.
+
+[h2]SOUTENIR LE PROJET[/h2]
+
+Le scénario vous plaît ? Un café aide à financer les prochaines histoires et mises à jour.
+
+[url=https://ko-fi.com/Z8Z8QJV31][img]https://storage.ko-fi.com/cdn/kofi6.png?v=6[/img][/url]
+
+[h2]CRÉDITS[/h2]
+
+Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).

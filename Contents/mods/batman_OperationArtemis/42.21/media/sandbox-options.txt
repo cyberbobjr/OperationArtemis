@@ -1,0 +1,113 @@
+VERSION = 1,
+
+option OperationArtemis.Enabled
+{
+	type = boolean,
+	default = true,
+	page = OperationArtemis,
+	translation = Artemis_Enabled,
+}
+
+option OperationArtemis.NoteChance
+{
+	type = integer,
+	min = 0,
+	max = 100,
+	default = 4,
+	page = OperationArtemis,
+	translation = Artemis_NoteChance,
+}
+
+option OperationArtemis.NoteGuaranteeKills
+{
+	type = integer,
+	min = 0,
+	max = 1000,
+	default = 30,
+	page = OperationArtemis,
+	translation = Artemis_NoteGuaranteeKills,
+}
+
+option OperationArtemis.NoteMinDay
+{
+	type = integer,
+	min = 0,
+	max = 3650,
+	default = 0,
+	page = OperationArtemis,
+	translation = Artemis_NoteMinDay,
+}
+
+option OperationArtemis.NoteRespawnDays
+{
+	type = integer,
+	min = 1,
+	max = 365,
+	default = 7,
+	page = OperationArtemis,
+	translation = Artemis_NoteRespawnDays,
+}
+
+option OperationArtemis.RadioFrequency
+{
+	type = double,
+	min = 88.0,
+	max = 999.8,
+	default = 108.0,
+	page = OperationArtemis,
+	translation = Artemis_RadioFrequency,
+}
+
+option OperationArtemis.DramaIntensity
+{
+	type = enum,
+	numValues = 3,
+	default = 2,
+	page = OperationArtemis,
+	translation = Artemis_DramaIntensity,
+}
+
+option OperationArtemis.ScreenEffects
+{
+	type = boolean,
+	default = true,
+	page = OperationArtemis,
+	translation = Artemis_ScreenEffects,
+}
+
+option OperationArtemis.SiegeNightControl
+{
+	type = enum,
+	numValues = 3,
+	default = 2,
+	page = OperationArtemis,
+	translation = Artemis_SiegeNightControl,
+}
+
+option OperationArtemis.ExtractionHoldMinutes
+{
+	type = integer,
+	min = 10,
+	max = 180,
+	default = 30,
+	page = OperationArtemis,
+	translation = Artemis_ExtractionHoldMinutes,
+}
+
+option OperationArtemis.SterilizationDays
+{
+	type = integer,
+	min = 0,
+	max = 60,
+	default = 0,
+	page = OperationArtemis,
+	translation = Artemis_SterilizationDays,
+}
+
+option OperationArtemis.DebugMode
+{
+	type = boolean,
+	default = false,
+	page = OperationArtemis,
+	translation = Artemis_DebugMode,
+}

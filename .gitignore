@@ -1,0 +1,23 @@
+tests/puppeteer/reports/
+tests/puppeteer/__pycache__/
+
+# Intermédiaires et essais de production, régénérables.
+source/**/__pycache__/
+source/media/out/assemble/
+source/media/out/click.wav
+source/media/out/voice_*_bande.wav
+source/media/out/voice_*_A.wav
+source/media/out/voice_*_Aferry.wav
+source/media/out/voice_*_C.wav
+source/media/out/voice_*_Cnodossier.wav
+source/media/out/sample_*.mp3
+source/media/out/*_essai*.mp3
+source/media/out/victory_candidate_*.png
+source/media/out/victory_green_*.png
+source/media/out/*_sheet.jpg
+
+# Prises vidéo et maquettes locales ; les sources de réalisation restent suivies.
+source/promo/captures/
+source/promo/illustrated-drafts/
+source/promo/page-preview.html
+source/art/*/before/

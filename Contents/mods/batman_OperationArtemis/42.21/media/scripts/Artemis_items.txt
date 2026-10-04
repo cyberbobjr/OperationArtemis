@@ -1,0 +1,138 @@
+module batman_Artemis
+{
+    /* Carnet de liaison trouvé sur un soldat mort. Le lire démarre l'Opération Artemis.
+       Modèle : objet Note vanilla et pages de journal de ResearchLabInternProfession (42.20). */
+    item ArtemisNote
+    {
+        DisplayCategory = Literature,
+        Weight = 0.1,
+        ItemType = base:literature,
+        Icon = Note1,
+        ReadType = photo,
+        StaticModel = Note2,
+        WorldStaticModel = Note2,
+        /* base:picture : lisible aussi par un personnage Illettré (ISInventoryPaneContextMenu.lua:2810). */
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateNote,
+    }
+
+    /* Documents et preuves de l'enquête (acte II). Lisibles comme le carnet (fenêtre vanilla des
+       documents, OnCreate commun) ; base:picture : lisibles aussi par un personnage Illettré.
+       Icônes et modèles vanilla (media/scripts/generated/items). */
+    item ArtemisBadge
+    {
+        DisplayCategory = Literature,
+        Weight = 0.05,
+        ItemType = base:literature,
+        Icon = PressBadge,
+        WorldStaticModel = PressID,
+        ReadType = photo,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    item ArtemisMissionOrders
+    {
+        DisplayCategory = Literature,
+        Weight = 0.1,
+        ItemType = base:literature,
+        Icon = Paperwork1,
+        StaticModel = Paperwork1,
+        WorldStaticModel = Paperwork1,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    item ArtemisPatientFile
+    {
+        DisplayCategory = Literature,
+        Weight = 0.2,
+        ItemType = base:literature,
+        Icon = PaperReport1,
+        StaticModel = Paperwork1,
+        WorldStaticModel = Paperwork1,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    item ArtemisRelayLog
+    {
+        DisplayCategory = Literature,
+        Weight = 0.5,
+        ItemType = base:literature,
+        Icon = Clipboard,
+        WorldStaticModel = Clipboard,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    item ArtemisDossier
+    {
+        DisplayCategory = Literature,
+        Weight = 0.5,
+        ItemType = base:literature,
+        Icon = Paperwork5,
+        StaticModel = Paperwork1,
+        WorldStaticModel = Paperwork1,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    /* Chapitre 4 bonus (Tikitown, phase 6) : bordereau d'expédition trouvé au relais, et notes de V
+       dans le labo satellite. */
+    item ArtemisWaybill
+    {
+        DisplayCategory = Literature,
+        Weight = 0.05,
+        ItemType = base:literature,
+        Icon = Paperwork,
+        StaticModel = Paperwork1,
+        WorldStaticModel = Paperwork1,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    item ArtemisLabNotes
+    {
+        DisplayCategory = Literature,
+        Weight = 0.2,
+        ItemType = base:literature,
+        Icon = Notebook,
+        StaticModel = Paperwork1,
+        WorldStaticModel = Paperwork1,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    /* Plan d'accès de la base (chapitre 5), sur le garde tombé devant la porte est. */
+    item ArtemisBasePlan
+    {
+        DisplayCategory = Literature,
+        Weight = 0.1,
+        ItemType = base:literature,
+        Icon = GraphPaper,
+        StaticModel = Paperwork1,
+        WorldStaticModel = Paperwork1,
+        ReadType = newspaper,
+        Tags = base:fastread;base:picture,
+        OnCreate = OperationArtemisItems.onCreateDocument,
+    }
+
+    /* Carte d'accès (chapitre 5) : une clé qui ouvre les portes blindées de la base
+       (keyId fixé par OnCreate, voir Artemis_BaseDoors). Sur le garde tombé devant la porte est. */
+    item ArtemisKeycard
+    {
+        DisplayCategory = Security,
+        Weight = 0.02,
+        ItemType = base:key,
+        Icon = IDcard,
+        WorldStaticModel = IDcard,
+        OnCreate = OperationArtemisItems.onCreateKeycard,
+    }
+}

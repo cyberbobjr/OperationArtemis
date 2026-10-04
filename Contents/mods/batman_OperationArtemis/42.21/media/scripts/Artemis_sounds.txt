@@ -1,0 +1,122 @@
+module Base
+{
+    /* Opération Artemis : écran de victoire. Voix de V sur « The First Light », un fichier par langue
+       (source/media/artemis_media.py), joué par getSoundManager():playMusic (non mis en pause). */
+    sound ArtemisVictoryFR
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryFR.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryEN
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryEN.ogg,
+            volume = 1.0,
+        }
+    }
+
+    /* Fins de la phase 5 : même voix et même musique, paragraphes propres à la sortie remplacés
+       (source/media/artemis_media.py assemble ; Artemis_Endings). */
+    sound ArtemisVictoryAFR
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryAFR.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryAEN
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryAEN.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryAferryFR
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryAferryFR.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryAferryEN
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryAferryEN.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryCFR
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryCFR.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryCEN
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryCEN.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryCnodossierFR
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryCnodossierFR.ogg,
+            volume = 1.0,
+        }
+    }
+
+    sound ArtemisVictoryCnodossierEN
+    {
+        category = Music,
+        clip
+        {
+            file = media/sound/ArtemisVictoryCnodossierEN.ogg,
+            volume = 1.0,
+        }
+    }
+
+    /* Moteur du passeur (route A sans mod de bateau) : boucle de 20 s tirée de « WWS_MSThtistart.ogg »,
+       Work With Sounds / Werstas, CC BY 4.0, via Wikimedia Commons (assets/ferry/CREDITS.md),
+       préparée par source/media/make_ferry_loops.py. Jouée par chaque client (Artemis_FerryFX). */
+    sound ArtemisFerryEngine
+    {
+        category = Object,
+        loop = true,
+        is3D = true,
+        clip
+        {
+            file = media/sound/ArtemisFerryEngine.ogg,
+            distanceMax = 80,
+            volume = 0.9,
+        }
+    }
+}

@@ -1,0 +1,7 @@
+name=batman_Operation Artemis
+id=batman_OperationArtemis
+description=End-game scenario: investigate Operation Artemis across Knox County, then escape the Exclusion Zone. Local mod, Build 42.21. Act I: Artemis notebook on military zombies, ARTEMIS radio on 108.0 MHz. Act II: bunker, clinic, relay and secret base, with documents, map reveals and a laboratory escape. Act III: helicopter, river (boat or ferryman) and checkpoint evacuation routes, with an optional sterilization countdown. Victory screen, chronicle and epilogues with French and English narration and music. Requires Signal Smoke. Work in progress: exfiltration routes and optional integrations still require in-game validation.
+poster=poster.png
+icon=icon.png
+versionMin=42.21
+require=\batman_SignalSmoke
