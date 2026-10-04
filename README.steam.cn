@@ -1,37 +1,52 @@
-[h1]Operation Artemis[/h1]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
-[b]活下来，只是开始。[/b]
+[i]“要是出了事，就听108.0。在夜里。先是数字，然后是声音。——V”[/i]
+发现于一名阵亡士兵的口袋。诺克斯县，1993年7月。
 
-从感染的军人身上找到一本笔记。收到一段加密广播。线索指向一个叫V的人。穿越诺克斯县追查证据，揭开“阿尔忒弥斯行动”的秘密，寻找离开封锁区的道路。
+撤离始终没有到来。紧急广播一遍遍循环着同样安抚人心的谎言。但在一个早已无人收听的频率上，有人在数数。
 
-[h2]追寻信号[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/02-follow-the-signal.jpg[/img]
 
-阅读笔记，调好军用无线电，仔细聆听。调查融入你的生存进程：文件、线索和地点会逐步揭示下一个目标。
+他自称V。他曾在封锁区内工作，就在围栏的另一侧。他知道军方把记录藏在哪里，而他的时间所剩无几。
 
-[h2]揭开行动的秘密[/h2]
+等待黑夜。转动旋钮。聆听数字。
 
-探索废弃地堡、诊所、无线电中继站和秘密地下基地。收集证据，在必要时恢复供电，追寻V留下的踪迹。拿到档案，才是逃脱的开始。
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/03-read-between-the-lines.jpg[/img]
 
-[h2]活着离开[/h2]
+March Ridge地下的地堡。West Point的诊所。一座仍记得V声音的无线电中继站——只要你能让它重新通电。你找回的每一份文件，都会解答一个问题，再引出两个新问题。
 
-一声警报，可能让安静的搜索变成逃出实验室的绝望攀登。之后选择出路：直升机撤离、河流与摆渡人，或检查站。每条路线都有自己的条件和结局。
+为什么第一位病人还没到，士兵就已经守在诊所门口？
+为什么命令的日期，比第一个人生病还早两天？
 
-[h2]让生存有新的目标[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/06-in-game-orders.jpg[/img]
+[i]游戏内的真实文件。留意页边的笔迹：有人比你先来过。[/i]
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/04-the-base-wakes-up.jpg[/img]
+
+在地下深处，答案被保存在一间寂静的房间里。拿走它们很容易。带着它们离开却没那么简单。档案通过安检门的那一刻，警报大作，红灯旋转，整座基地苏醒过来。
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/05-get-out-alive.jpg[/img]
+
+离开封锁区的路有三条。黎明时分的直升机。河上的摆渡人。桥上的检查站。每条路都有代价，都有各自的结局，有些甚至可能在你赶到之前关闭。
+
+活下来，只是开始。
+
+[h2]等待你的一切[/h2]
 
 [list]
-[*]在现有世界中展开调查，阅读文件，用日志保存发现。
-[*]有因有果的危险：供电、警报、安保通道与实验室逃脱。
-[*]多条撤离路线、胜利画面，以及根据出口变化的尾声。
-[*]可选的灭菌倒计时，以及发现概率、强度和撤离时间的沙盒设置。
+[*]一段交织进你自己生存进程的谜团，就在原版地图上：文件、无线电、日志，以及你自己的抉择。
+[*]遍布诺克斯县的真实地点、可以阅读的证据，以及一个对你说话的声音。
+[*]实验室逃脱、三条撤离路线、胜利画面，以及英语和法语配音的尾声。
+[*]可选的灭菌倒计时会让封锁区与你为敌；另有发现、强度和撤离时机的沙盒设置。
 [/list]
 
-[h2]开始调查[/h2]
+[h2]一切如何开始[/h2]
 
-启用Operation Artemis和[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]。在感染的军人身上寻找并阅读Artemis笔记。跟随线索即可开始，不需要调试指令。
+启用Operation Artemis和[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]。然后，活下去。搜查疫情爆发时倒下的士兵：其中一人带着一本笔记。读完它，找到一台无线电，等待夜幕降临。
 
-[h2]版本与语言[/h2]
+[h2]须知[/h2]
 
-Project Zomboid 42.21。直升机、摆渡人和检查站的主要路线已在单人游戏中测试。多人游戏和可选整合仍需单独验证。剧情文本与结局配音为法语和英语。
+Project Zomboid Build 42.21。已在单人游戏中测试；多人游戏和可选整合仍需各自验证。剧情文本与配音结局为英语和法语。
 
 [h2]支持项目[/h2]
 
@@ -41,4 +56,4 @@ Project Zomboid 42.21。直升机、摆渡人和检查站的主要路线已在�
 
 [h2]鸣谢[/h2]
 
-Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).
+渡船引擎音效：Work With Sounds / Werstas，[url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url]，[url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]；已编辑（循环、单声道、标准化）。除特别注明外，插图均为宣传美术，并非游戏截图。

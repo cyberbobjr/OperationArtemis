@@ -1,37 +1,52 @@
-[h1]Operation Artemis[/h1]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
-[b]Survival was only the beginning.[/b]
+[i]“If it goes wrong, listen to 108.0. At night. First the numbers, then the voice. — V.”[/i]
+Found in the pocket of a dead soldier. Knox County, July 1993.
 
-A notebook taken from a military infected. A coded broadcast. Someone called V. Follow the evidence across Knox County, uncover Operation Artemis, and find a way out of the Exclusion Zone.
+The evacuations never came. The emergency broadcast loops the same reassuring lies. But on a frequency nobody listens to anymore, someone is counting.
 
-[h2]FOLLOW THE SIGNAL[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/02-follow-the-signal.jpg[/img]
 
-Read the notebook, tune a military radio and listen. The investigation starts inside your survival run: documents, clues and locations gradually reveal your next objective.
+They call themselves V. They worked inside the Zone, on the other side of the fence. They know where the army hid its records, and they are running out of time.
 
-[h2]UNRAVEL THE OPERATION[/h2]
+Wait for the dark. Turn the dial. Listen to the numbers.
 
-Explore a deserted bunker, a clinic, a radio relay and a secret underground base. Recover evidence, restore power when needed and make sense of V’s trail. Taking the dossier is only the start of your escape.
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/03-read-between-the-lines.jpg[/img]
 
-[h2]GET OUT ALIVE[/h2]
+A bunker beneath March Ridge. A clinic in West Point. A radio relay that still remembers V's voice, if you can bring the power back. Every document you recover answers one question and opens two more.
 
-An alarm can turn a quiet search into a desperate climb out of the laboratory. Then choose your exit: helicopter evacuation, the river and its ferryman, or the checkpoint. Each route has its own conditions and ending.
+Why were soldiers waiting at the clinic door before the first patient ever arrived?
+Why are the orders dated two days before anyone fell sick?
 
-[h2]WHAT CHANGES YOUR RUN[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/06-in-game-orders.jpg[/img]
+[i]Real in-game document. Read the margins: someone was here before you.[/i]
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/04-the-base-wakes-up.jpg[/img]
+
+Deep underground, the answers are kept in a quiet room. Taking them is easy. Leaving with them is not. The moment the dossier crosses the gate, the alarms start, the red lights turn, and the base wakes up.
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/05-get-out-alive.jpg[/img]
+
+Three ways out of the Exclusion Zone. A helicopter at dawn. A ferryman on the river. A checkpoint on the bridge. Each one has its price, its own ending, and some may close before you reach them.
+
+Survival was only the beginning.
+
+[h2]WHAT AWAITS YOU[/h2]
 
 [list]
-[*]An investigation built into the existing world, with readable documents and a journal that keeps your discoveries.
-[*]Danger with a purpose: power, alarms, security access and a laboratory escape.
-[*]Several exfiltration routes, a victory screen and epilogues tied to your exit.
-[*]An optional sterilization countdown, plus sandbox settings for discovery, intensity and extraction timing.
+[*]A mystery woven into your own survival run on the vanilla map: documents, a radio, a journal and your own decisions.
+[*]Real places across Knox County, readable evidence, and a voice that talks to you.
+[*]A laboratory escape, three exfiltration routes, a victory screen and voiced epilogues in English and French.
+[*]An optional sterilization countdown that turns the Zone against you, plus sandbox settings for discovery, intensity and extraction timing.
 [/list]
 
-[h2]START YOUR INVESTIGATION[/h2]
+[h2]HOW IT BEGINS[/h2]
 
-Enable Operation Artemis and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Find the Artemis notebook on military infected and read it. Let the clues guide you; the first step does not require debug commands.
+Enable Operation Artemis and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Then survive. Search the soldiers who fell in the outbreak: one of them carries a notebook. Read it, find a radio, and wait for nightfall.
 
-[h2]BUILD & LANGUAGES[/h2]
+[h2]GOOD TO KNOW[/h2]
 
-Project Zomboid 42.21. Core helicopter, ferryman and checkpoint routes tested in singleplayer. Multiplayer and optional integrations still need their own validation. Story text and voiced endings: French and English.
+Project Zomboid Build 42.21. Tested in singleplayer; multiplayer and optional integrations still need their own validation. Story text and voiced endings in English and French.
 
 [h2]SUPPORT THE PROJECT[/h2]
 
@@ -41,4 +56,4 @@ Enjoy the scenario? A coffee helps fund the next stories and updates.
 
 [h2]CREDITS[/h2]
 
-Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).
+Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized). Illustrations are promotional artwork, not in-game screenshots, except where noted.

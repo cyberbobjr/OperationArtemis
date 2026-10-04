@@ -77,4 +77,10 @@ def main():
 
 
 if __name__ == "__main__":
+    import sys
+    # Superseded on 2026-10-04: README.steam* are now written by hand with the cinematic banners
+    # (source/art/20261004-steam-banners). Running this would overwrite them and workshop.txt.
+    if "--force" not in sys.argv:
+        sys.exit("prepare_page.py is superseded (README.steam* written by hand since 2026-10-04); "
+                 "use --force only to regenerate the old layout from descriptions.json.")
     main()

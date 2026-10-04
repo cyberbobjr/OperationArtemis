@@ -1,44 +1,59 @@
-[h1]Operation Artemis[/h1]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
-[b]Survivre n’était que le début.[/b]
+[i]« Si ça tourne mal, écoute le 108.0. La nuit. D'abord les chiffres, ensuite la voix. — V. »[/i]
+Retrouvé dans la poche d'un soldat mort. Comté de Knox, juillet 1993.
 
-Un carnet récupéré sur un infecté militaire. Une émission codée. Un certain V. Suivez les indices à travers Knox County, découvrez ce que cache l’opération Artemis et trouvez une sortie de la zone d’exclusion.
+Les évacuations ne sont jamais venues. La radio d'urgence répète en boucle les mêmes mensonges rassurants. Mais sur une fréquence que plus personne n'écoute, quelqu'un compte.
 
-[h2]SUIVEZ LE SIGNAL[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/02-follow-the-signal.jpg[/img]
 
-Lisez le carnet, réglez une radio militaire et écoutez. L’enquête commence au cœur de votre partie : documents, indices et lieux vous révèlent progressivement votre prochain objectif.
+Il se fait appeler V. Il travaillait dans la Zone, de l'autre côté de la clôture. Il sait où l'armée a caché ses dossiers, et le temps lui manque.
 
-[h2]REMONTEZ LA PISTE[/h2]
+Attends la nuit. Tourne le bouton. Écoute les chiffres.
 
-Explorez un bunker abandonné, une clinique, un relais radio et une base souterraine secrète. Récupérez les preuves, rétablissez le courant quand il le faut et déchiffrez la piste laissée par V. Prendre le dossier n’est que le début de votre évasion.
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/03-read-between-the-lines.jpg[/img]
 
-[h2]SORTEZ VIVANT[/h2]
+Un bunker sous March Ridge. Une clinique à West Point. Un relais radio qui se souvient encore de la voix de V, si tu parviens à lui rendre le courant. Chaque document retrouvé répond à une question et en ouvre deux autres.
 
-Une alarme peut transformer une fouille tranquille en remontée désespérée hors du laboratoire. Choisissez ensuite votre sortie : évacuation par hélicoptère, fleuve et passeur, ou checkpoint. Chaque route possède ses conditions et sa fin.
+Pourquoi des soldats attendaient-ils devant la clinique avant même l'arrivée du premier patient ?
+Pourquoi les ordres sont-ils datés de deux jours avant les premiers malades ?
 
-[h2]CE QUI CHANGE VOTRE PARTIE[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/06-in-game-orders.jpg[/img]
+[i]Vrai document en jeu. Lis les marges : quelqu'un est passé avant toi.[/i]
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/04-the-base-wakes-up.jpg[/img]
+
+Tout au fond, les réponses dorment dans une salle silencieuse. Les prendre est facile. Repartir avec, beaucoup moins. Dès que le dossier franchit le portique, l'alarme hurle, les lumières rouges tournent et la base se réveille.
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/05-get-out-alive.jpg[/img]
+
+Trois façons de quitter la zone d'exclusion. Un hélicoptère à l'aube. Un passeur sur le fleuve. Un checkpoint sur le pont. Chacune a son prix, sa propre fin, et certaines pourraient se fermer avant que tu les atteignes.
+
+Survivre n'était que le début.
+
+[h2]CE QUI T'ATTEND[/h2]
 
 [list]
-[*]Une enquête intégrée au monde existant, des documents à lire et un journal qui conserve vos découvertes.
-[*]Un danger qui a un sens : courant, alarmes, accès sécurisés et évasion du laboratoire.
-[*]Plusieurs routes d’exfiltration, un panneau de victoire et des épilogues liés à votre sortie.
-[*]Un compte à rebours de stérilisation facultatif et des options de bac à sable pour la découverte, l’intensité et les délais d’extraction.
+[*]Un mystère tissé dans ta propre partie de survie, sur la carte vanilla : des documents, une radio, un journal et tes propres décisions.
+[*]De vrais lieux du comté de Knox, des preuves à lire et une voix qui te parle.
+[*]Une évasion de laboratoire, trois routes d'exfiltration, un écran de victoire et des épilogues narrés en français et en anglais.
+[*]Un compte à rebours de stérilisation optionnel qui retourne la Zone contre toi, et des réglages sandbox pour la découverte, l'intensité et le délai d'extraction.
 [/list]
 
-[h2]COMMENCEZ L’ENQUÊTE[/h2]
+[h2]COMMENT TOUT COMMENCE[/h2]
 
-Activez Operation Artemis et [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Trouvez le carnet Artemis sur les infectés militaires et lisez-le. Les indices vous guideront ; le départ de l’enquête ne demande aucune commande debug.
+Active Operation Artemis et [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Puis survis. Fouille les soldats tombés pendant l'épidémie : l'un d'eux porte un carnet. Lis-le, trouve une radio et attends la nuit.
 
-[h2]BUILD ET LANGUES[/h2]
+[h2]BON À SAVOIR[/h2]
 
-Project Zomboid 42.21. Routes principales hélicoptère, passeur et checkpoint testées en solo. Multijoueur et intégrations optionnelles restent à valider séparément. Textes du récit et fins doublées : français et anglais.
+Project Zomboid Build 42.21. Testé en solo ; le multijoueur et les intégrations optionnelles doivent encore être validés. Textes de l'histoire et fins narrées en français et en anglais.
 
 [h2]SOUTENIR LE PROJET[/h2]
 
-Le scénario vous plaît ? Un café aide à financer les prochaines histoires et mises à jour.
+Le scénario te plaît ? Un café aide à financer les prochaines histoires et mises à jour.
 
 [url=https://ko-fi.com/Z8Z8QJV31][img]https://storage.ko-fi.com/cdn/kofi6.png?v=6[/img][/url]
 
 [h2]CRÉDITS[/h2]
 
-Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).
+Moteur du passeur : Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url] ; modifié (boucle, mono, normalisé). Les illustrations sont des visuels promotionnels, pas des captures du jeu, sauf mention contraire.

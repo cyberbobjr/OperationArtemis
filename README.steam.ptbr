@@ -1,44 +1,59 @@
-[h1]Operation Artemis[/h1]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
-[b]Sobreviver era só o começo.[/b]
+[i]“Se der errado, escuta a 108.0. De noite. Primeiro os números, depois a voz. — V.”[/i]
+Encontrado no bolso de um soldado morto. Knox County, julho de 1993.
 
-Um caderno encontrado em um infectado militar. Uma transmissão codificada. Alguém chamado V. Siga as pistas por Knox County, descubra a Operação Artemis e encontre uma saída da zona de exclusão.
+As evacuações nunca vieram. A transmissão de emergência repete sem parar as mesmas mentiras reconfortantes. Mas, numa frequência que ninguém mais escuta, alguém está contando.
 
-[h2]SIGA O SINAL[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/02-follow-the-signal.jpg[/img]
 
-Leia o caderno, sintonize um rádio militar e escute. A investigação começa dentro da sua partida: documentos, pistas e locais revelam aos poucos seu próximo objetivo.
+Ele se chama de V. Trabalhava dentro da Zona, do outro lado da cerca. Sabe onde o exército escondeu seus registros, e o tempo dele está acabando.
 
-[h2]DESVENDE A OPERAÇÃO[/h2]
+Espere escurecer. Gire o dial. Escute os números.
 
-Explore um bunker abandonado, uma clínica, uma estação de rádio e uma base subterrânea secreta. Recolha provas, restabeleça a energia quando necessário e reconstrua o caminho de V. Pegar o dossiê é só o começo da fuga.
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/03-read-between-the-lines.jpg[/img]
 
-[h2]SAIA COM VIDA[/h2]
+Um bunker sob March Ridge. Uma clínica em West Point. Uma estação retransmissora que ainda se lembra da voz de V, se você conseguir religar a energia. Cada documento que você recupera responde a uma pergunta e abre mais duas.
 
-Um alarme pode transformar uma busca tranquila em uma subida desesperada para escapar do laboratório. Depois escolha sua saída: helicóptero, rio e barqueiro, ou posto de controle. Cada rota tem suas condições e seu final.
+Por que havia soldados esperando na porta da clínica antes mesmo de o primeiro paciente chegar?
+Por que as ordens são datadas de dois dias antes de alguém adoecer?
 
-[h2]O QUE MUDA SUA PARTIDA[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/06-in-game-orders.jpg[/img]
+[i]Documento real do jogo. Leia as margens: alguém passou por aqui antes de você.[/i]
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/04-the-base-wakes-up.jpg[/img]
+
+Lá no fundo, as respostas ficam guardadas numa sala silenciosa. Pegá-las é fácil. Sair com elas, não. No instante em que o dossiê cruza o portal de segurança, os alarmes disparam, as luzes vermelhas giram e a base acorda.
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/05-get-out-alive.jpg[/img]
+
+Três saídas da zona de exclusão. Um helicóptero ao amanhecer. Um barqueiro no rio. Um posto de controle na ponte. Cada uma tem seu preço, seu próprio final, e algumas podem se fechar antes de você chegar.
+
+Sobreviver era só o começo.
+
+[h2]O QUE TE ESPERA[/h2]
 
 [list]
-[*]Uma investigação integrada ao mundo existente, documentos para ler e um diário que guarda suas descobertas.
-[*]Perigos com propósito: energia, alarmes, acessos de segurança e fuga do laboratório.
-[*]Várias rotas de extração, tela de vitória e epílogos ligados à sua saída.
-[*]Contagem regressiva de esterilização opcional e opções de sandbox para descoberta, intensidade e horários de extração.
+[*]Um mistério entrelaçado na sua própria partida de sobrevivência no mapa vanilla: documentos, um rádio, um diário e suas próprias decisões.
+[*]Lugares reais por todo o Knox County, provas para ler e uma voz que fala com você.
+[*]Uma fuga do laboratório, três rotas de exfiltração, uma tela de vitória e epílogos narrados em inglês e francês.
+[*]Uma contagem regressiva de esterilização opcional que vira a Zona contra você, além de opções de sandbox para descoberta, intensidade e tempo de extração.
 [/list]
 
-[h2]COMECE A INVESTIGAÇÃO[/h2]
+[h2]COMO TUDO COMEÇA[/h2]
 
-Ative Operation Artemis e [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Encontre o caderno Artemis nos infectados militares e leia. Siga as pistas; o início não exige comandos de depuração.
+Ative Operation Artemis e [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Depois, sobreviva. Reviste os soldados que caíram no surto: um deles carrega um caderno. Leia, encontre um rádio e espere a noite cair.
 
-[h2]BUILD E IDIOMAS[/h2]
+[h2]BOM SABER[/h2]
 
-Project Zomboid 42.21. Rotas principais de helicóptero, barqueiro e posto de controle testadas no modo solo. Multijogador e integrações opcionais ainda precisam de validação separada. Textos da história e finais com voz: francês e inglês.
+Project Zomboid Build 42.21. Testado no modo solo; multijogador e integrações opcionais ainda precisam de validação própria. Textos da história e finais narrados em inglês e francês.
 
 [h2]APOIE O PROJETO[/h2]
 
-Gostou do cenário? Um café ajuda a financiar novas histórias e atualizações.
+Curtiu o cenário? Um café ajuda a financiar as próximas histórias e atualizações.
 
 [url=https://ko-fi.com/Z8Z8QJV31][img]https://storage.ko-fi.com/cdn/kofi6.png?v=6[/img][/url]
 
 [h2]CRÉDITOS[/h2]
 
-Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).
+Motor do barco: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; editado (loop, mono, normalizado). As ilustrações são artes promocionais, não capturas de tela do jogo, exceto quando indicado.

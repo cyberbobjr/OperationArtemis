@@ -1,37 +1,52 @@
-[h1]Operation Artemis[/h1]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
-[b]Hayatta kalmak yalnızca başlangıçtı.[/b]
+[i]“İşler ters giderse 108.0’ı dinle. Geceleri. Önce sayılar, sonra ses. — V.”[/i]
+Ölü bir askerin cebinde bulundu. Knox County, Temmuz 1993.
 
-Enfekte bir askerden alınan defter. Şifreli bir yayın. V adında biri. Knox County boyunca ipuçlarını takip et, Artemis Operasyonu’nun sırrını çöz ve karantina bölgesinden çıkış yolu bul.
+Tahliyeler hiç gelmedi. Acil durum yayını aynı rahatlatıcı yalanları durmadan tekrarlıyor. Ama artık kimsenin dinlemediği bir frekansta biri sayıyor.
 
-[h2]SİNYALİ TAKİP ET[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/02-follow-the-signal.jpg[/img]
 
-Defteri oku, askerî telsizin frekansını ayarla ve dinle. Araştırma hayatta kalma mücadelenin içinde başlar: belgeler, ipuçları ve mekânlar sıradaki hedefini yavaş yavaş ortaya çıkarır.
+Kendine V diyor. Bölge’nin içinde, çitin öbür tarafında çalışmış. Ordunun kayıtlarını nereye sakladığını biliyor ve zamanı tükeniyor.
 
-[h2]OPERASYONUN SIRRINI ÇÖZ[/h2]
+Karanlığı bekle. Kadranı çevir. Sayıları dinle.
 
-Terk edilmiş bir sığınağı, kliniği, radyo röle istasyonunu ve gizli yeraltı üssünü keşfet. Kanıtları topla, gerektiğinde elektriği geri getir ve V’nin izini sür. Dosyayı almak kaçışın yalnızca başlangıcıdır.
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/03-read-between-the-lines.jpg[/img]
 
-[h2]SAĞ ÇIK[/h2]
+March Ridge’in altında bir sığınak. West Point’te bir klinik. Elektriği geri getirebilirsen, V’nin sesini hâlâ hatırlayan bir radyo röle istasyonu. Bulduğun her belge bir soruyu yanıtlıyor ve iki yenisini doğuruyor.
 
-Bir alarm, sakin bir aramayı laboratuvardan umutsuz bir kaçışa çevirebilir. Ardından çıkışını seç: helikopter, nehir ve kayıkçı veya kontrol noktası. Her yolun kendi koşulları ve sonu vardır.
+İlk hasta daha gelmeden askerler neden kliniğin kapısında bekliyordu?
+Emirler neden kimse hastalanmadan iki gün önceye tarihli?
 
-[h2]OYUNUNA YENİ BİR AMAÇ[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/06-in-game-orders.jpg[/img]
+[i]Oyun içinden gerçek bir belge. Kenar notlarını oku: senden önce burada biri vardı.[/i]
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/04-the-base-wakes-up.jpg[/img]
+
+Yerin derinliklerinde, cevaplar sessiz bir odada saklanıyor. Onları almak kolay. Onlarla çıkmak değil. Dosya güvenlik kapısından geçtiği anda alarmlar çalar, kırmızı ışıklar döner ve üs uyanır.
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/05-get-out-alive.jpg[/img]
+
+Karantina bölgesinden üç çıkış yolu. Şafakta bir helikopter. Nehirde bir kayıkçı. Köprüde bir kontrol noktası. Her birinin kendi bedeli, kendi sonu var ve bazıları sen ulaşamadan kapanabilir.
+
+Hayatta kalmak yalnızca başlangıçtı.
+
+[h2]SENİ NELER BEKLİYOR[/h2]
 
 [list]
-[*]Mevcut dünyaya yerleştirilmiş bir araştırma, okunabilir belgeler ve keşiflerini saklayan günlük.
-[*]Elektrik, alarmlar, güvenlik geçişleri ve laboratuvardan kaçış gibi anlamlı tehlikeler.
-[*]Birden fazla tahliye yolu, zafer ekranı ve çıkışına göre değişen epiloglar.
-[*]İsteğe bağlı sterilizasyon geri sayımı; keşif, yoğunluk ve tahliye süresi için sandbox ayarları.
+[*]Vanilla haritadaki kendi hayatta kalma oyununa örülmüş bir gizem: belgeler, bir telsiz, bir günlük ve senin kararların.
+[*]Knox County’nin dört bir yanında gerçek mekânlar, okunabilir kanıtlar ve seninle konuşan bir ses.
+[*]Laboratuvardan kaçış, üç tahliye rotası, bir zafer ekranı ve İngilizce ile Fransızca seslendirilmiş epiloglar.
+[*]Bölge’yi sana karşı çeviren isteğe bağlı bir sterilizasyon geri sayımı; ayrıca keşif, yoğunluk ve tahliye zamanlaması için sandbox ayarları.
 [/list]
 
-[h2]ARAŞTIRMAYA BAŞLA[/h2]
+[h2]HER ŞEY NASIL BAŞLAR[/h2]
 
-Operation Artemis ve [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url] modlarını etkinleştir. Enfekte askerlerde Artemis defterini bul ve oku. İpuçlarını takip et; başlangıç için hata ayıklama komutları gerekmez.
+Operation Artemis ve [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url] modlarını etkinleştir. Sonra hayatta kal. Salgında düşen askerleri ara: içlerinden biri bir defter taşıyor. Onu oku, bir telsiz bul ve gecenin çökmesini bekle.
 
-[h2]SÜRÜM VE DİLLER[/h2]
+[h2]BİLMEN GEREKENLER[/h2]
 
-Project Zomboid 42.21. Helikopter, kayıkçı ve kontrol noktası ana yolları tek oyunculuda test edildi. Çok oyunculu ve isteğe bağlı entegrasyonlar ayrıca doğrulanmalı. Hikâye metinleri ve sesli sonlar Fransızca ve İngilizce.
+Project Zomboid Build 42.21. Tek oyunculuda test edildi; çok oyunculu mod ve isteğe bağlı entegrasyonların ayrıca doğrulanması gerekiyor. Hikâye metinleri ve sesli sonlar İngilizce ve Fransızca.
 
 [h2]PROJEYİ DESTEKLE[/h2]
 
@@ -41,4 +56,4 @@ Senaryoyu beğendin mi? Bir kahve yeni hikâyeleri ve güncellemeleri finanse et
 
 [h2]EMEĞİ GEÇENLER[/h2]
 
-Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).
+Feribot motoru: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; düzenlendi (döngü, mono, normalize). Aksi belirtilmedikçe görseller oyun içi ekran görüntüsü değil, tanıtım çizimleridir.

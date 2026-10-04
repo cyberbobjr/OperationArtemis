@@ -1,37 +1,52 @@
-[h1]Operation Artemis[/h1]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
-[b]Überleben war erst der Anfang.[/b]
+[i]„Wenn es schiefgeht, hör auf 108.0. Nachts. Erst die Zahlen, dann die Stimme. — V.“[/i]
+Gefunden in der Tasche eines toten Soldaten. Knox County, Juli 1993.
 
-Ein Notizbuch von einem infizierten Soldaten. Eine verschlüsselte Sendung. Jemand namens V. Folge den Spuren durch Knox County, enthülle Operation Artemis und finde einen Weg aus der Sperrzone.
+Die Evakuierungen kamen nie. Der Notfallsender wiederholt in Endlosschleife dieselben beruhigenden Lügen. Doch auf einer Frequenz, die niemand mehr hört, zählt jemand.
 
-[h2]FOLGE DEM SIGNAL[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/02-follow-the-signal.jpg[/img]
 
-Lies das Notizbuch, stelle ein Militärfunkgerät ein und höre zu. Die Ermittlung beginnt mitten in deinem Überlebenskampf: Dokumente, Hinweise und Orte offenbaren nach und nach dein nächstes Ziel.
+Er nennt sich V. Er hat in der Zone gearbeitet, auf der anderen Seite des Zauns. Er weiß, wo die Armee ihre Akten versteckt hat, und ihm läuft die Zeit davon.
 
-[h2]ENTHÜLLE DIE OPERATION[/h2]
+Warte auf die Dunkelheit. Dreh am Regler. Hör auf die Zahlen.
 
-Erkunde einen verlassenen Bunker, eine Klinik, eine Funkstation und eine geheime unterirdische Basis. Sichere Beweise, stelle bei Bedarf den Strom wieder her und entschlüssle Vs Spuren. Mit dem Dossier beginnt erst die Flucht.
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/03-read-between-the-lines.jpg[/img]
 
-[h2]ENTKOMME LEBEND[/h2]
+Ein Bunker unter March Ridge. Eine Klinik in West Point. Eine Funkrelaisstation, die sich noch an Vs Stimme erinnert, wenn du ihr wieder Strom gibst. Jedes Dokument, das du findest, beantwortet eine Frage und wirft zwei neue auf.
 
-Ein Alarm kann eine ruhige Suche in einen verzweifelten Aufstieg aus dem Labor verwandeln. Wähle dann deinen Ausweg: Hubschrauber, Fluss und Fährmann oder Kontrollpunkt. Jede Route hat eigene Bedingungen und ein eigenes Ende.
+Warum warteten Soldaten schon vor der Kliniktür, bevor überhaupt der erste Patient eintraf?
+Warum sind die Befehle zwei Tage vor der ersten Erkrankung datiert?
 
-[h2]DAS VERÄNDERT DEIN SPIEL[/h2]
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/06-in-game-orders.jpg[/img]
+[i]Echtes Dokument aus dem Spiel. Lies die Randnotizen: Jemand war vor dir hier.[/i]
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/04-the-base-wakes-up.jpg[/img]
+
+Tief unter der Erde liegen die Antworten in einem stillen Raum. Sie zu nehmen ist leicht. Mit ihnen hinauszukommen nicht. Sobald das Dossier die Sicherheitsschleuse passiert, heulen die Alarme, die roten Lichter kreisen, und die Basis erwacht.
+
+[img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/05-get-out-alive.jpg[/img]
+
+Drei Wege aus der Sperrzone. Ein Hubschrauber im Morgengrauen. Ein Fährmann auf dem Fluss. Ein Kontrollpunkt auf der Brücke. Jeder hat seinen Preis und sein eigenes Ende, und manche schließen sich vielleicht, bevor du sie erreichst.
+
+Überleben war erst der Anfang.
+
+[h2]WAS DICH ERWARTET[/h2]
 
 [list]
-[*]Eine Ermittlung in der bestehenden Welt, lesbare Dokumente und ein Tagebuch für deine Entdeckungen.
-[*]Gefahr mit Bedeutung: Strom, Alarmanlagen, gesicherte Zugänge und die Flucht aus dem Labor.
-[*]Mehrere Fluchtrouten, ein Siegesbildschirm und passende Epiloge.
-[*]Ein optionaler Sterilisierungs-Countdown sowie Sandbox-Einstellungen für Entdeckung, Intensität und Evakuierungszeiten.
+[*]Ein Mysterium, verwoben mit deinem eigenen Überlebensspiel auf der Vanilla-Karte: Dokumente, ein Funkgerät, ein Tagebuch und deine eigenen Entscheidungen.
+[*]Echte Orte überall in Knox County, lesbare Beweise und eine Stimme, die zu dir spricht.
+[*]Eine Flucht aus dem Labor, drei Exfiltrationsrouten, ein Siegesbildschirm und vertonte Epiloge auf Englisch und Französisch.
+[*]Ein optionaler Sterilisierungs-Countdown, der die Zone gegen dich wendet, dazu Sandbox-Einstellungen für Entdeckung, Intensität und Evakuierungszeitpunkt.
 [/list]
 
-[h2]BEGINNE DIE ERMITTLUNG[/h2]
+[h2]SO BEGINNT ES[/h2]
 
-Aktiviere Operation Artemis und [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Finde das Artemis-Notizbuch bei infizierten Soldaten und lies es. Folge den Hinweisen; der Einstieg benötigt keine Debug-Befehle.
+Aktiviere Operation Artemis und [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882]Signal Smoke[/url]. Dann überlebe. Durchsuche die Soldaten, die beim Ausbruch gefallen sind: Einer von ihnen trägt ein Notizbuch. Lies es, finde ein Funkgerät und warte auf die Nacht.
 
-[h2]BUILD UND SPRACHEN[/h2]
+[h2]GUT ZU WISSEN[/h2]
 
-Project Zomboid 42.21. Die Hauptrouten mit Hubschrauber, Fährmann und Kontrollpunkt wurden im Einzelspieler getestet. Mehrspieler und optionale Integrationen müssen noch separat geprüft werden. Erzähltexte und vertonte Enden: Französisch und Englisch.
+Project Zomboid Build 42.21. Im Einzelspieler getestet; Mehrspieler und optionale Integrationen müssen noch separat geprüft werden. Erzähltexte und vertonte Enden auf Englisch und Französisch.
 
 [h2]UNTERSTÜTZE DAS PROJEKT[/h2]
 
@@ -41,4 +56,4 @@ Gefällt dir das Szenario? Ein Kaffee hilft, weitere Geschichten und Updates zu 
 
 [h2]DANKSAGUNGEN[/h2]
 
-Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized).
+Fährmotor: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; bearbeitet (Schleife, Mono, normalisiert). Die Illustrationen sind Werbegrafiken, keine Screenshots aus dem Spiel, sofern nicht anders angegeben.
