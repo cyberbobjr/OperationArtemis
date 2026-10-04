@@ -3,6 +3,22 @@
 This changelog starts with the initial repository snapshot. Earlier development
 is summarized below rather than reconstructed as separate releases.
 
+## 0.2.0 — 2026-10-04
+
+First release on the Steam Workshop, for Project Zomboid Build 42.21. Requires Signal Smoke.
+
+### Added
+
+- A story-driven investigation across Knox County: a bloodstained notebook found on military infected, the ARTEMIS broadcast on 108.0 MHz, and a voice called V.
+- Four sites to search: the March Ridge bunker, the West Point clinic, the KY-7 radio relay and a secret underground base, with readable documents and a journal.
+- A laboratory escape: the dossier sets off the alarm and the base wakes up.
+- Three ways out of the Exclusion Zone (helicopter, ferryman on the river, checkpoint), each with its own ending, victory screen and voiced epilogue in English or French.
+- An optional sterilization countdown, plus sandbox settings for discovery, intensity and extraction timing.
+
+### Known limits
+
+- Tested in singleplayer. Multiplayer, boat-mod routes and optional integrations still need their own validation.
+
 ## 0.1.0 — 2026-10-04
 
 Initial development snapshot for Project Zomboid Build 42.21; not a Steam
