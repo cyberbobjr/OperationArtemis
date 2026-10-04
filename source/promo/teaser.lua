@@ -15,6 +15,10 @@ return function(params)
     local ch=Story.CHAPTERS
     local TAPE={252,237,51}
     local RED={0.9,0.25,0.2}
+    -- stills=true: Steam page screenshots (Zomboid/Screenshots/ArtemisStill_*.png) at the strong
+    -- moments, plus three more documents. The teaser timing is unchanged when it is off.
+    local stills=params.stills==true or params.stills=="true"
+    local function docOpts(name) return stills and {still="ArtemisStill_"..name} or nil end
 
     local function square(x,y,z) return getCell():getGridSquare(math.floor(x),math.floor(y),z) end
     local function marker(c,event,shot)
@@ -141,6 +145,20 @@ return function(params)
             marker(c,"ROLL",id)
         end)
     end
+    local function snap(name)
+        if stills then
+            scene:wait(0.4):call("CAPTURE: "..name,function() takeScreenshot("ArtemisStill_"..name..".png") end)
+        end
+    end
+    local function extraDocument(name,fullType,seconds)
+        if not stills then return end
+        scene:call("DOCUMENT SUPPLEMENTAIRE: "..name,function(c)
+            c.vars.film.extraDocs=c.vars.film.extraDocs or {}
+            c.vars.film.extraDocs[name]=document(c,fullType)
+        end):showUI(true)
+             :document(function(c) return c.vars.film.extraDocs[name] end,seconds or 2,docOpts(name))
+             :showUI(false)
+    end
     local function cut(id)
         scene:call("COUPE: "..id,function(c)
             marker(c,"CUT",id); c.vars.film.activeShot=nil
@@ -187,7 +205,8 @@ return function(params)
              :openLoot(function(c) return c.vars.film.body:getContainer() end)
              :wait(0.8)
              :transfer(function(c) return c.vars.film.note end,nil,15)
-             :document(function(c) return c.vars.film.note end,3.5)
+        snap("01_fouille")
+        scene:document(function(c) return c.vars.film.note end,3.5,docOpts("01_carnet"))
              :showUI(false)
              :think("IGUI_Artemis_Thought_NoteRead")
              :stand()
@@ -237,10 +256,12 @@ return function(params)
              end)
              :wait(2.5)
              :call("V: plus de donnees",function(c) radioText(c,"IGUI_Artemis_Tape_5") end)
-             :wait(1.5)
+        snap("02_radio_v")
+        scene:wait(1.5)
              :call("Eteindre la lampe",function(c) torch(c,false) end)
              :crouch(true)
              :wait(4.5)
+        extraDocument("02_registre_relais",Const.ITEM.RELAY_LOG,2)
         cut(id)
     end
 
@@ -262,7 +283,7 @@ return function(params)
              :showUI(true)
              :openLoot(function(c) return c.vars.film.orders:getContainer() end)
              :transfer(function(c) return c.vars.film.orders end,nil,15)
-             :document(function(c) return c.vars.film.orders end,2.5)
+             :document(function(c) return c.vars.film.orders end,2.5,docOpts("03_ordres_mission"))
              :showUI(false)
              :releaseExtra("dormeur",{rise=true})
              :wait(1.2)
@@ -288,7 +309,7 @@ return function(params)
              :showUI(true)
              :openLoot(function(c) return c.vars.film.file:getContainer() end)
              :transfer(function(c) return c.vars.film.file end,nil,15)
-             :document(function(c) return c.vars.film.file end,1.8)
+             :document(function(c) return c.vars.film.file end,1.8,docOpts("04_dossier_patient"))
              :showUI(false)
              :moveOnSet("sprint",15)
         cut(id)
@@ -314,7 +335,13 @@ return function(params)
              :showUI(true)
              :openLoot(function(c) return c.vars.film.dossier:getContainer() end)
              :transfer(function(c) return c.vars.film.dossier end,nil,15)
-             :showUI(false)
+        snap("05_archives")
+        if stills then
+            scene:document(function(c) return c.vars.film.dossier end,2,docOpts("05_dossier_artemis"))
+            extraDocument("05_notes_labo",Const.ITEM.LAB_NOTES,2)
+            scene:showUI(true):openLoot(function(c) return c.vars.film.dossier:getContainer() end)
+        end
+        scene:showUI(false)
              :blinkLight("alarme",0.6)
              :call("Le portique sonne",function(c)
                  marker(c,"BEAT",id.."_alarm")
@@ -324,7 +351,8 @@ return function(params)
              :releaseExtras({"sujet1","sujet2","sujet3"})
              :stand()
              :wait(0.6)
-             :moveOnSet("sprint",15)
+        snap("05_alarme")
+        scene:moveOnSet("sprint",15)
         cut(id)
     end
 
@@ -346,7 +374,8 @@ return function(params)
              :releaseExtra("soldat1")
              :wait(1.2)
              :shootAt(function(c) return c.vars.production.namedExtras.soldat1 end,{shots=1,aimTime=0.6,timeout=10})
-             :releaseExtras({"soldat2","soldat3","soldat4"})
+        snap("06_evasion")
+        scene:releaseExtras({"soldat2","soldat3","soldat4"})
              :think("IGUI_Artemis_Thought_surface_ch5_base")
              :moveOnSet("sprint",15)
         cut(id)
@@ -372,6 +401,8 @@ return function(params)
              :reload(function(c) return c.vars.film.gun end,20)
              :releaseExtras({"horde1","horde2","horde3","horde4","horde5"})
              :wait(0.8)
+        snap("07_horde")
+        scene
              :moveOnSet("sprint",15)
         cut(id)
     end
@@ -400,6 +431,8 @@ return function(params)
             end)
              :think("IGUI_Artemis_Thought_extraction_landed")
              :emote("comehere",{hold=1,timeout=5})
+        snap("08_extraction")
+        scene
              :releaseExtras({"traque1","traque2","traque3"})
              :moveOnSet("sprint",15)
              :wait(1.5)
