@@ -11,7 +11,7 @@ Survival was only the beginning.
 A notebook taken from a military infected. A coded broadcast on 108.0 MHz. Someone called V.
 Operation Artemis is a story mod for Project Zomboid Build 42: follow the evidence across Knox County, uncover what the army was really doing in the Exclusion Zone, and find a way out alive.
 
-▶ Get it on the Steam Workshop: [WORKSHOP LINK]
+▶ Get it on the Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3813648615
 ▶ Required mod: Signal Smoke — https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882
 
 ━━━━━━━━━━━━━━━━━━━━
