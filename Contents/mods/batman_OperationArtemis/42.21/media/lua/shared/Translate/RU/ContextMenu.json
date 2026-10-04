@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "Журнал: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis (отладка)",
+    "ContextMenu_Artemis_DebugStart": "Начать операцию",
+    "ContextMenu_Artemis_DebugAdvance": "Перейти к следующему акту",
+    "ContextMenu_Artemis_DebugReset": "Сбросить состояние",
+    "ContextMenu_Artemis_DebugGiveNote": "Получить блокнот Artemis",
+    "ContextMenu_Artemis_DebugCompleteChapter": "Завершить текущую главу",
+    "ContextMenu_Artemis_DebugGoToChapter": "Перейти к месту главы",
+    "ContextMenu_Artemis_DebugGoToSite": "Перейти к тайнику главы",
+    "ContextMenu_Artemis_CallExtraction": "Вызвать эвакуацию (по рации)",
+    "ContextMenu_Artemis_DebugGoToLanding": "Перейти к зоне посадки",
+    "ContextMenu_Artemis_CheckpointTest": "Сдать анализ крови (армия)",
+    "ContextMenu_Artemis_CallFerry": "Вызвать перевозчика (по рации)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "Перейти к блокпосту (мост Clark Memorial)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "Перейти к посту на мосту Kinsella",
+    "ContextMenu_Artemis_DebugGoToFerry": "Перейти к причалу перевозчика (Brandenburg)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "Перейти к лодке V (Riverside)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "Перейти к лодке V (Louisville)",
+    "ContextMenu_Artemis_CheckpointLeave": "Попросить выпустить из загона (прервать карантин)"
+}

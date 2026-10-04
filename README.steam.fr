@@ -46,7 +46,7 @@ Active Operation Artemis et [url=https://steamcommunity.com/sharedfiles/filedeta
 
 [h2]BON À SAVOIR[/h2]
 
-Project Zomboid Build 42.21. Testé en solo ; le multijoueur et les intégrations optionnelles doivent encore être validés. Textes de l'histoire et fins narrées en français et en anglais.
+Project Zomboid Build 42.21. Testé en solo ; le multijoueur et les intégrations optionnelles doivent encore être validés. Textes de l'histoire en français, anglais, allemand, espagnol, portugais, portugais du Brésil, russe, turc, chinois, japonais et coréen (en chinois, japonais et coréen, les documents en jeu restent en anglais). Fins narrées en français et en anglais.
 
 [h2]SOUTENIR LE PROJET[/h2]
 

@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "Günlük: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis (hata ayıklama)",
+    "ContextMenu_Artemis_DebugStart": "Operasyonu başlat",
+    "ContextMenu_Artemis_DebugAdvance": "Sonraki perdeye geç",
+    "ContextMenu_Artemis_DebugReset": "Durumu sıfırla",
+    "ContextMenu_Artemis_DebugGiveNote": "Artemis defterini al",
+    "ContextMenu_Artemis_DebugCompleteChapter": "Geçerli bölümü tamamla",
+    "ContextMenu_Artemis_DebugGoToChapter": "Bölümün konumuna git",
+    "ContextMenu_Artemis_DebugGoToSite": "Bölümün bırakma noktasına git",
+    "ContextMenu_Artemis_CallExtraction": "Tahliye çağır (telsiz)",
+    "ContextMenu_Artemis_DebugGoToLanding": "İniş bölgesine git",
+    "ContextMenu_Artemis_CheckpointTest": "Kan testini yaptır (ordu)",
+    "ContextMenu_Artemis_CallFerry": "Kayıkçıyı çağır (telsiz)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "Kontrol noktasına git (Clark Memorial Bridge)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "Kinsella köprüsü karakoluna git",
+    "ContextMenu_Artemis_DebugGoToFerry": "Kayıkçının iskelesine git (Brandenburg)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "V'nin teknesine git (Riverside)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "V'nin teknesine git (Louisville)",
+    "ContextMenu_Artemis_CheckpointLeave": "Çitli alandan çıkmayı iste (karantinayı bırak)"
+}

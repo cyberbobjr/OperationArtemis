@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "Tagebuch: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis (Debug)",
+    "ContextMenu_Artemis_DebugStart": "Operation starten",
+    "ContextMenu_Artemis_DebugAdvance": "Zum nächsten Akt springen",
+    "ContextMenu_Artemis_DebugReset": "Status zurücksetzen",
+    "ContextMenu_Artemis_DebugGiveNote": "Artemis-Notizbuch erhalten",
+    "ContextMenu_Artemis_DebugCompleteChapter": "Aktuelles Kapitel abschließen",
+    "ContextMenu_Artemis_DebugGoToChapter": "Zum Ort des Kapitels gehen",
+    "ContextMenu_Artemis_DebugGoToSite": "Zum Ablageort des Kapitels gehen",
+    "ContextMenu_Artemis_CallExtraction": "Evakuierung anfordern (Funk)",
+    "ContextMenu_Artemis_DebugGoToLanding": "Zur Landezone gehen",
+    "ContextMenu_Artemis_CheckpointTest": "Bluttest machen (Armee)",
+    "ContextMenu_Artemis_CallFerry": "Fährmann rufen (Funk)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "Zum Kontrollpunkt gehen (Clark Memorial Bridge)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "Zum Posten an der Kinsella-Brücke gehen",
+    "ContextMenu_Artemis_DebugGoToFerry": "Zum Anleger des Fährmanns gehen (Brandenburg)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "Zu Vs Boot gehen (Riverside)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "Zu Vs Boot gehen (Louisville)",
+    "ContextMenu_Artemis_CheckpointLeave": "Darum bitten, den Pferch zu verlassen (Quarantäne abbrechen)"
+}

@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "日誌: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis(デバッグ)",
+    "ContextMenu_Artemis_DebugStart": "作戦を開始する",
+    "ContextMenu_Artemis_DebugAdvance": "次の幕へ進む",
+    "ContextMenu_Artemis_DebugReset": "状態をリセットする",
+    "ContextMenu_Artemis_DebugGiveNote": "Artemisの手帳を受け取る",
+    "ContextMenu_Artemis_DebugCompleteChapter": "現在の章を完了する",
+    "ContextMenu_Artemis_DebugGoToChapter": "章の目的地へ移動する",
+    "ContextMenu_Artemis_DebugGoToSite": "章のアイテム配置地点へ移動する",
+    "ContextMenu_Artemis_CallExtraction": "避難を要請する(無線)",
+    "ContextMenu_Artemis_DebugGoToLanding": "着陸地点へ移動する",
+    "ContextMenu_Artemis_CheckpointTest": "血液検査を受ける(軍)",
+    "ContextMenu_Artemis_CallFerry": "渡し守を呼ぶ(無線)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "検問所へ移動する(クラーク・メモリアル橋)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "キンセラ橋の監視所へ移動する",
+    "ContextMenu_Artemis_DebugGoToFerry": "渡し守の船着き場へ移動する(ブランデンバーグ)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "Vのボートへ移動する(リバーサイド)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "Vのボートへ移動する(ルイビル)",
+    "ContextMenu_Artemis_CheckpointLeave": "隔離柵から出たいと申し出る(隔離を放棄)"
+}

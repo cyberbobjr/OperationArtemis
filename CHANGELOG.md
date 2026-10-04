@@ -3,6 +3,18 @@
 This changelog starts with the initial repository snapshot. Earlier development
 is summarized below rather than reconstructed as separate releases.
 
+## 0.3.0 — 2026-10-04
+
+### Added
+
+- The story is now translated into German, Spanish, Portuguese, Brazilian Portuguese, Russian, Turkish, Simplified Chinese, Japanese and Korean, in addition to English and French: radio broadcasts, V's lines, thoughts, journal, objectives, endings, item names and sandbox options.
+- In German, Spanish, Portuguese, Brazilian Portuguese, Russian and Turkish, the documents you find are translated too, with their layout kept.
+
+### Known limits
+
+- In Chinese, Japanese and Korean, the documents stay in English: the game's document fonts have no glyphs for these languages. Their English titles are given in the journal and objectives.
+- The voiced endings remain in English and French.
+
 ## 0.2.0 — 2026-10-04
 
 First release on the Steam Workshop, for Project Zomboid Build 42.21. Requires Signal Smoke.

@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "Diario: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis (depuración)",
+    "ContextMenu_Artemis_DebugStart": "Iniciar la operación",
+    "ContextMenu_Artemis_DebugAdvance": "Pasar al acto siguiente",
+    "ContextMenu_Artemis_DebugReset": "Reiniciar el estado",
+    "ContextMenu_Artemis_DebugGiveNote": "Recibir el cuaderno Artemis",
+    "ContextMenu_Artemis_DebugCompleteChapter": "Completar el capítulo actual",
+    "ContextMenu_Artemis_DebugGoToChapter": "Ir al lugar del capítulo",
+    "ContextMenu_Artemis_DebugGoToSite": "Ir al punto de entrega del capítulo",
+    "ContextMenu_Artemis_CallExtraction": "Pedir la evacuación (radio)",
+    "ContextMenu_Artemis_DebugGoToLanding": "Ir a la zona de aterrizaje",
+    "ContextMenu_Artemis_CheckpointTest": "Hacerse el análisis de sangre (ejército)",
+    "ContextMenu_Artemis_CallFerry": "Llamar al barquero (radio)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "Ir al puesto de control (Clark Memorial Bridge)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "Ir al puesto del puente Kinsella",
+    "ContextMenu_Artemis_DebugGoToFerry": "Ir al muelle del barquero (Brandenburg)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "Ir a la barca de V (Riverside)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "Ir a la barca de V (Louisville)",
+    "ContextMenu_Artemis_CheckpointLeave": "Pedir salir del recinto (abandonar la cuarentena)"
+}

@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "일지: Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis (디버그)",
+    "ContextMenu_Artemis_DebugStart": "작전 시작",
+    "ContextMenu_Artemis_DebugAdvance": "다음 막으로 이동",
+    "ContextMenu_Artemis_DebugReset": "상태 초기화",
+    "ContextMenu_Artemis_DebugGiveNote": "Artemis 수첩 받기",
+    "ContextMenu_Artemis_DebugCompleteChapter": "현재 장 완료",
+    "ContextMenu_Artemis_DebugGoToChapter": "현재 장의 장소로 이동",
+    "ContextMenu_Artemis_DebugGoToSite": "현재 장의 아이템 배치 지점으로 이동",
+    "ContextMenu_Artemis_CallExtraction": "철수 요청 (무전)",
+    "ContextMenu_Artemis_DebugGoToLanding": "착륙 지점으로 이동",
+    "ContextMenu_Artemis_CheckpointTest": "혈액 검사 받기 (군)",
+    "ContextMenu_Artemis_CallFerry": "뱃사공 호출 (무전)",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "검문소로 이동 (클라크 메모리얼 다리)",
+    "ContextMenu_Artemis_DebugGoToKinsella": "킨셀라 다리 초소로 이동",
+    "ContextMenu_Artemis_DebugGoToFerry": "뱃사공의 선착장으로 이동 (브랜든버그)",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "V의 보트로 이동 (리버사이드)",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "V의 보트로 이동 (루이빌)",
+    "ContextMenu_Artemis_CheckpointLeave": "격리장에서 나가겠다고 요청 (격리 포기)"
+}

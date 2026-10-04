@@ -1,0 +1,21 @@
+{
+    "ContextMenu_Artemis_Journal": "日志：Operation Artemis",
+    "ContextMenu_Artemis_Debug": "Operation Artemis（调试）",
+    "ContextMenu_Artemis_DebugStart": "开始行动",
+    "ContextMenu_Artemis_DebugAdvance": "进入下一幕",
+    "ContextMenu_Artemis_DebugReset": "重置状态",
+    "ContextMenu_Artemis_DebugGiveNote": "获得Artemis笔记本",
+    "ContextMenu_Artemis_DebugCompleteChapter": "完成当前章节",
+    "ContextMenu_Artemis_DebugGoToChapter": "前往本章地点",
+    "ContextMenu_Artemis_DebugGoToSite": "前往本章投放点",
+    "ContextMenu_Artemis_CallExtraction": "呼叫撤离（无线电）",
+    "ContextMenu_Artemis_DebugGoToLanding": "前往着陆区",
+    "ContextMenu_Artemis_CheckpointTest": "接受血液检测（军方）",
+    "ContextMenu_Artemis_CallFerry": "呼叫摆渡人（无线电）",
+    "ContextMenu_Artemis_DebugGoToCheckpoint": "前往检查站（Clark Memorial大桥）",
+    "ContextMenu_Artemis_DebugGoToKinsella": "前往Kinsella大桥哨所",
+    "ContextMenu_Artemis_DebugGoToFerry": "前往摆渡人码头（Brandenburg）",
+    "ContextMenu_Artemis_DebugGoToBoatWest": "前往V的船（Riverside）",
+    "ContextMenu_Artemis_DebugGoToBoatEast": "前往V的船（Louisville）",
+    "ContextMenu_Artemis_CheckpointLeave": "要求离开隔离围栏（放弃隔离）"
+}
