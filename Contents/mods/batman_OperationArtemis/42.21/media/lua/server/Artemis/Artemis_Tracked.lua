@@ -72,7 +72,7 @@ function Tracked.register(zombie, profileName)
     applyTraits(zombie, entry, profile)
     local key = Tracking.outfitKey(zombie:getPersistentOutfitID())
     if key == nil then
-        Const.log("ERREUR : zombie suivi sans tenue persistante (" .. profileName .. ")")
+        Const.log("ERROR: tracked zombie without persistent outfit (" .. profileName .. ")")
         return nil
     end
     Store.save(State.withFlagValue(Store.load(), REGISTRY, tostring(key), entry))
@@ -98,13 +98,15 @@ local function onZombieCreate(zombie)
     local profile = Story.TRACKED[entry.profile]
     if profile == nil or not Tracking.isInArea(profile.area, zombie:getX(), zombie:getY()) then return end
     applyTraits(zombie, entry, profile)
-    Const.log("zombie suivi retrouve : " .. entry.profile .. " en " .. math.floor(zombie:getX())
+    Const.log("tracked zombie found again: " .. entry.profile .. " at " .. math.floor(zombie:getX())
         .. "," .. math.floor(zombie:getY()))
 end
 
 -- Objet de mort : dans l'inventaire du zombie, que le cadavre reprend (IsoDeadBody.java:327) ; au
 -- sol si le zombie brûle (un cadavre en feu disparaît avec son inventaire, mais BurnTick ne brûle
 -- pas les objets au sol, IsoGridSquare.java:5590-5601).
+-- Nom traduit ici, donc dans la langue du serveur et non dans celle de chaque joueur ; en multijoueur,
+-- il suppose les traductions du mod rechargées (Artemis_ServerTranslations).
 local function giveDeathItem(zombie, deathItem)
     local item = instanceItem(deathItem.type)
     item:setName(getText(deathItem.nameKey))
@@ -141,7 +143,7 @@ local function onZombieDead(zombie)
     if key then
         Store.save(State.withFlagValue(Store.load(), REGISTRY, tostring(key), nil))
     end
-    Const.log("zombie suivi abattu : " .. profileName .. (deathItem and (", objet " .. modData[DEATH_KEY]) or ""))
+    Const.log("tracked zombie killed: " .. profileName .. (deathItem and (", item " .. modData[DEATH_KEY]) or ""))
 end
 
 if not isClient() then

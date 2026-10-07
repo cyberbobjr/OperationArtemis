@@ -2,23 +2,16 @@
 -- Le moteur résout « OnCreate = OperationArtemisItems.onCreateNote » par son nom : la table doit être globale.
 
 local Const = require "Artemis/Artemis_Const"
-local Config = require "Artemis/Artemis_Config"
+local NoteMedia = require "Artemis/Artemis_NoteMedia"
 
 OperationArtemisItems = OperationArtemisItems or {}
 
 -- Rend le carnet lisible par la fenêtre vanilla des documents (ISReadABook -> PZAPI.UI.PrintMedia).
--- La mise en page (info) et le texte contiennent la fréquence, réglable : ils sont traduits ici,
--- avec la fréquence (%1), puis enregistrés sur l'objet. À la lecture, getText reçoit ce texte
--- déjà traduit ; ce n'est pas une clé connue, il le renvoie donc tel quel (Translator.java:363-376).
--- Limite : le carnet garde la langue et la fréquence du moment de sa création.
+-- La mise en page (info) et le texte contiennent la fréquence, réglable. Souvent exécuté sur le
+-- serveur (carnet glissé dans un cadavre) : on enregistre les clés et la fréquence, et le client
+-- compose le texte dans la langue du lecteur à l'ouverture (Artemis_NoteMedia, Artemis_NoteReader).
 function OperationArtemisItems.onCreateNote(item)
-    local frequency = Config.radioFrequencyLabel()
-    item:getModData().printMedia = {
-        id = "ArtemisNote",
-        title = "Print_Media_ArtemisNote_title",
-        info = getText("Print_Media_ArtemisNote_info", frequency),
-        text = getText("Print_Text_ArtemisNote_info", frequency),
-    }
+    item:getModData().printMedia = NoteMedia.newData()
 end
 
 -- Documents de l'enquête (badge, ordres, dossiers, journal du relais) : même fenêtre que le carnet.

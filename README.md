@@ -131,6 +131,7 @@ Contents/mods/batman_OperationArtemis/
   42.21/                  Mod metadata, Lua, items, translations and media
 docs/                     Design, integration and development test notes
 tests/puppeteer/           In-game scenarios, campaign plans and collection tools
+tests/lua/                Offline Lua tests (python tests/run_lua_tests.py, needs lupa)
 source/                   Artwork, audio and promotional production sources
 assets/                   Source assets and third-party resource credits
 README.steam*             Steam Workshop descriptions and translations

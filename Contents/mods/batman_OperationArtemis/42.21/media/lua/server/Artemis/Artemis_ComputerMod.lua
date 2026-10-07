@@ -10,7 +10,9 @@
 -- - portable : même initialisation que ses apparitions (ComputerModLaptop_Spawns.lua:23-31), pièces à
 --   100 % (ComputerModComponents.ensure, 3e argument), puis ComputerModDesktopNotes = { { key, name,
 --   text } }, gardées au premier démarrage (client/ComputerMod_UI_State.lua:2746).
--- Textes écrits dans la langue du serveur au moment de la pose (limite en multijoueur dédié).
+-- Textes écrits au moment de la pose, donc dans la langue du serveur et non dans celle de chaque
+-- joueur ; en multijoueur, ils supposent les traductions du mod rechargées
+-- (Artemis_ServerTranslations), sinon les clés brutes seraient enregistrées.
 -- Serveur ou solo.
 
 local Const = require "Artemis/Artemis_Const"
@@ -99,7 +101,7 @@ end
 function ComputerMod.create(def)
     local item = def.kind == "laptop" and createLaptop(def) or (def.kind == "disc" and createDisc(def) or nil)
     if item == nil then
-        Const.log("Computer Mod absent (ou API changee) : contenu bonus " .. tostring(def.kind) .. " non pose")
+        Const.log("Computer Mod missing (or API changed): bonus content " .. tostring(def.kind) .. " not placed")
     end
     return item
 end

@@ -119,12 +119,13 @@ local function addToContainer(container, item)
 end
 
 -- Carte-cachette vanilla (chemin du panneau de debug vanilla, StashDebug.lua:94-99 : la carte garde
--- ses annotations), renommée pour qu'on la distingue d'une carte ordinaire. Le nom est traduit
--- dans la langue du serveur (limite en multijoueur dédié). nil si la cachette est introuvable.
+-- ses annotations), renommée pour qu'on la distingue d'une carte ordinaire. Le nom est traduit ici,
+-- donc dans la langue du serveur et non dans celle de chaque joueur ; en multijoueur, il suppose les
+-- traductions du mod rechargées (Artemis_ServerTranslations). nil si la cachette est introuvable.
 local function createStashMap(stashMap)
     local stash = StashSystem.getStash(stashMap.stash)
     if stash == nil then
-        Const.log("carte-cachette introuvable : " .. stashMap.stash)
+        Const.log("stash map not found: " .. stashMap.stash)
         return nil
     end
     local map = instanceItem(stash:getItem())
@@ -155,7 +156,7 @@ local function placeItems(placement)
         container, object = createContainer(square, placement.fallbackSprite)
     end
     if container == nil then
-        Const.log("ERREUR : aucun conteneur en " .. placement.x .. "," .. placement.y .. "," .. placement.z)
+        Const.log("ERROR: no container at " .. placement.x .. "," .. placement.y .. "," .. placement.z)
         return false
     end
     prepareContainer(container, object)
@@ -258,8 +259,8 @@ local function placeCorpses(placement, group)
             placed = placed + 1
         end
     end
-    local what = placement.fakeDead and " faux morts sur " or " corps sur "
-    Const.log("pose " .. group .. " : " .. placed .. what .. placement.count)
+    local what = placement.fakeDead and " fake dead out of " or " bodies out of "
+    Const.log("placed " .. group .. ": " .. placed .. what .. placement.count)
     return true
 end
 
@@ -268,7 +269,7 @@ local function placeGuard(placement, group)
     local squares = freeSquaresAround(placement)
     local body = squares[1] and createSoldierBody(squares[1], placement.outfit, group)
     if body == nil then
-        Const.log("ERREUR : garde non pose (" .. group .. ")")
+        Const.log("ERROR: guard not placed (" .. group .. ")")
         return false
     end
     local inventory = body:getContainer()
@@ -294,7 +295,7 @@ end
 local function placeGenerator(placement, group)
     local square = freeSquareAt(placement)
     if square == nil then
-        Const.log("ERREUR : aucune case libre pour le groupe electrogene (" .. group .. ")")
+        Const.log("ERROR: no free square for the generator (" .. group .. ")")
         return false
     end
     local item = instanceItem(placement.item)
@@ -304,7 +305,7 @@ local function placeGenerator(placement, group)
     generator:setConnected(true)
     local position = { x = square:getX(), y = square:getY(), z = square:getZ() }
     Store.save(State.withFlagValue(Store.load(), "generators", group, position))
-    Const.log("pose " .. group .. " : groupe electrogene en " .. position.x .. "," .. position.y .. "," .. position.z)
+    Const.log("placed " .. group .. ": generator at " .. position.x .. "," .. position.y .. "," .. position.z)
     return true
 end
 
@@ -313,7 +314,7 @@ end
 local function placeWorldItem(placement, group)
     local square = freeSquareAt(placement)
     if square == nil then
-        Const.log("ERREUR : aucune case libre pour " .. placement.item .. " (" .. group .. ")")
+        Const.log("ERROR: no free square for " .. placement.item .. " (" .. group .. ")")
         return false
     end
     local item = instanceItem(placement.item)
@@ -348,14 +349,14 @@ end
 local function placeWallLight(placement, group)
     local square, sprite = wallLightSpot(placement)
     if square == nil then
-        Const.log("ERREUR : aucun mur libre pour l'applique (" .. group .. ")")
+        Const.log("ERROR: no free wall for the wall lamp (" .. group .. ")")
         return false
     end
     square:transmitAddObjectToSquare(IsoObject.new(getCell(), square, sprite), -1)
     local lamp = { x = square:getX(), y = square:getY(), z = square:getZ(), sprite = sprite,
         color = placement.light.color, radius = placement.light.radius, blink = placement.light.blink }
     Store.save(State.withFlagValue(Store.load(), "wallLights", group, lamp))
-    Const.log("pose " .. group .. " : applique en " .. lamp.x .. "," .. lamp.y .. "," .. lamp.z)
+    Const.log("placed " .. group .. ": wall lamp at " .. lamp.x .. "," .. lamp.y .. "," .. lamp.z)
     return true
 end
 
@@ -383,7 +384,7 @@ local function placeRadio(placement, group)
     data:setChannelRaw(channel)
     radio:setRenderYOffset(placement.renderYOffset)
     square:transmitAddObjectToSquare(radio, -1)
-    Const.log("pose " .. group .. " : radio posee en " .. placement.x .. "," .. placement.y .. "," .. placement.z)
+    Const.log("placed " .. group .. ": radio at " .. placement.x .. "," .. placement.y .. "," .. placement.z)
     return true
 end
 
@@ -511,7 +512,7 @@ local function placeZombies(placement, group)
             end
         end
     end
-    Const.log("pose " .. group .. " : " .. placed .. " zombies sur " .. count)
+    Const.log("placed " .. group .. ": " .. placed .. " zombies out of " .. count)
     return placed > 0 or count == 0
 end
 
@@ -524,7 +525,7 @@ local function placeLockedRoom(placement, group)
     local door = doorSquare and doorSquare:getIsoDoor()
     local square = freeSquareAt(placement)
     if door == nil or square == nil then
-        Const.log("ERREUR : porte ou case introuvable (" .. group .. ")")
+        Const.log("ERROR: door or square not found (" .. group .. ")")
         return false
     end
     if door:IsOpen() then
@@ -533,8 +534,8 @@ local function placeLockedRoom(placement, group)
     door:setLockedByKey(true)
     door:syncIsoObject(false, 0, nil, nil)
     local zombie = spawnZombie(square, placement, false)
-    Const.log("pose " .. group .. " : porte verrouillee, zombie " .. tostring(placement.outfit)
-        .. (zombie and " pose" or " NON pose"))
+    Const.log("placed " .. group .. ": door locked, zombie " .. tostring(placement.outfit)
+        .. (zombie and " placed" or " NOT placed"))
     return zombie ~= nil
 end
 
@@ -642,7 +643,7 @@ local function placeGroup(group, placements)
         -- Objet qui annonce un chapitre optionnel : posé seulement si ce chapitre a lieu (Lua 5.1 : pas
         -- de goto).
         if placement.ifChapter and not Plot.isChapterAvailable(Store.load(), placement.ifChapter) then
-            Const.log("pose " .. group .. " : sautee (chapitre " .. placement.ifChapter .. " indisponible)")
+            Const.log("placement " .. group .. ": skipped (chapter " .. placement.ifChapter .. " unavailable)")
         else
             local kind = KINDS[placement.kind]
             if kind == nil or not kind.place(placement, group) then
@@ -650,7 +651,7 @@ local function placeGroup(group, placements)
             end
         end
     end
-    Const.log("pose " .. group .. (isComplete and " : objets poses" or " : incomplete"))
+    Const.log("placement " .. group .. (isComplete and ": items placed" or ": incomplete"))
     return isComplete
 end
 
@@ -728,7 +729,7 @@ function Placement.restoreLost(chapterId, players)
             local state = Store.load()
             if state.placed[group] then
                 Store.save(State.withoutPlaced(state, group))
-                Const.log("pose " .. group .. " : objet indispensable perdu, nouvelle pose")
+                Const.log("placement " .. group .. ": required item lost, placing again")
             end
         end
     end

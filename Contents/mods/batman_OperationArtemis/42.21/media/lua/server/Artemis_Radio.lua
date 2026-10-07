@@ -154,7 +154,9 @@ local function lineText(line)
     if line.raw then
         return line.raw
     end
-    -- En multijoueur dédié, le texte est celui de la langue du serveur (limite vanilla).
+    -- Texte composé ici, donc dans la langue du serveur et non dans celle de chaque auditeur. En
+    -- multijoueur, les traductions du mod n'existent sur le serveur qu'après leur rechargement
+    -- (Artemis_ServerTranslations) ; sans lui, la clé brute serait diffusée.
     return getText(line.key)
 end
 
@@ -178,11 +180,11 @@ local function onLoadRadioScripts(scriptManager, _isNewGame)
     local channel = DynamicRadioChannel.new(Const.RADIO.NAME, frequency, ChannelCategory.Military, Const.RADIO.UUID)
     scriptManager:AddChannel(channel, false)
     if scriptManager:getRadioChannel(Const.RADIO.UUID) == nil then
-        Const.log("ERREUR : chaine radio non creee sur " .. label
-            .. " : frequence deja prise par une autre chaine ; en choisir une autre dans les options sandbox")
+        Const.log("ERROR: radio channel not created on " .. label
+            .. ": frequency already used by another channel; choose another one in the sandbox options")
         return
     end
-    Const.log("chaine radio creee sur " .. label)
+    Const.log("radio channel created on " .. label)
 end
 
 -- Relance la diffusion quand elle est terminée, ou perdue au rechargement

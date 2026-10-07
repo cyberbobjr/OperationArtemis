@@ -61,4 +61,4 @@ description=[h2]CREDITS[/h2]
 description=
 description=Ferry engine: Work With Sounds / Werstas, [url=https://creativecommons.org/licenses/by/4.0/]CC BY 4.0[/url], [url=https://commons.wikimedia.org/wiki/File:WWS_MSThtistart.ogg]Wikimedia Commons[/url]; edited (loop, mono, normalized). Illustrations are promotional artwork, not in-game screenshots, except where noted.
 tags=Build 42;WIP
-visibility=private
+visibility=public

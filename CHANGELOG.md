@@ -3,6 +3,17 @@
 This changelog starts with the initial repository snapshot. Earlier development
 is summarized below rather than reconstructed as separate releases.
 
+## 0.3.1 — 2026-10-07
+
+### Fixed
+
+- Multiplayer: the Artemis notebook now shows the radio frequency again and opens in each reader's own language. Notebooks already found are fixed when read.
+- Multiplayer: the ARTEMIS broadcasts, the name of V's stash map, Miller's ID card and the Computer Mod disc and laptop no longer show raw translation keys such as `IGUI_Artemis_...`.
+
+### Known limits
+
+- In multiplayer, these broadcasts and item names use the server's language, not each player's. Items placed before this update keep the names they were given.
+
 ## 0.3.0 — 2026-10-04
 
 ### Added
