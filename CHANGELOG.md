@@ -3,6 +3,13 @@
 This changelog starts with the initial repository snapshot. Earlier development
 is summarized below rather than reconstructed as separate releases.
 
+## 0.3.2 — 2026-10-09
+
+### Fixed
+
+- Singleplayer: a walkie-talkie switched on and clipped to the belt received the ARTEMIS broadcasts but showed nothing on screen. Each line is shown again above your character, once, as with a radio in hand.
+- Multiplayer: a radio carried in the main inventory but not held (belt included) now also shows the ARTEMIS lines above your character, once, instead of only in the radio chat. Nothing is added when Better Walkie Talkies is active.
+
 ## 0.3.1 — 2026-10-07
 
 ### Fixed

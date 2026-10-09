@@ -10,8 +10,7 @@ local Extraction = require "Artemis/Artemis_Extraction"
 local Sterilization = require "Artemis/Artemis_Sterilization"
 local Story = require "Artemis/Artemis_Story"
 
--- Couleur des lignes, proche du vert pâle des transmissions militaires.
-local LINE_COLOR = { r = 0.70, g = 0.85, b = 0.55 }
+local LINE_COLOR = Const.RADIO.LINE_COLOR
 
 -- Diffusions. « raw » : texte tel quel (les parasites doivent valoir exactement
 -- <fzzt>, <bzzt>, <szzt> ou <wzzt>, ZomboidRadio.java:106-114). « key » : clé de traduction.
