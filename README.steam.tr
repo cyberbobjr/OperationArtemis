@@ -1,5 +1,5 @@
 [h1]UYUMSUZ DEĞİŞİKLİK — sürüm 0.4.1 (2026-10-10)[/h1]
-[b]Bu mod artık [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url] gerektiriyor. Ona abone olun ve bu modla birlikte etkinleştirin. Özel sunucular: WorkshopItems= satırına 3817018338, Mods= satırına batman_BeltRadio ekleyin; aksi hâlde oyun bu modu yüklemez (günlükte yalnızca bir uyarı görünür).[/b]
+[b]Bu mod artık [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url] + [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3694097672][b]TooltipLib[/b][/url] gerektiriyor. İkisine de abone olun ve bu modla birlikte etkinleştirin. Özel sunucular: WorkshopItems= satırına 3817018338;3694097672, Mods= satırına batman_BeltRadio;TooltipLib ekleyin; aksi hâlde oyun bu modu yüklemez (günlükte yalnızca bir uyarı görünür).[/b]
 
 [img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 

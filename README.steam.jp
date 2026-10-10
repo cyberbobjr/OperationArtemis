@@ -1,5 +1,5 @@
 [h1]互換性のない変更 — バージョン 0.4.1（2026-10-10）[/h1]
-[b]このMODは [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url] が必須になりました。購読し、このMODと一緒に有効にしてください。専用サーバー：WorkshopItems= に 3817018338、Mods= に batman_BeltRadio を追加してください。追加しないとゲームはこのMODを読み込みません（ログに警告が出るだけです）。[/b]
+[b]このMODは [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url] + [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3694097672][b]TooltipLib[/b][/url] が必須になりました。両方を購読し、このMODと一緒に有効にしてください。専用サーバー：WorkshopItems= に 3817018338;3694097672、Mods= に batman_BeltRadio;TooltipLib を追加してください。追加しないとゲームはこのMODを読み込みません（ログに警告が出るだけです）。[/b]
 
 [img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
