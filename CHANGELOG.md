@@ -3,6 +3,12 @@
 This changelog starts with the initial repository snapshot. Earlier development
 is summarized below rather than reconstructed as separate releases.
 
+## 0.4.1 — 2026-10-10
+
+### Changed
+
+- [Belt Walkie-Talkie](https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338) (mod ID `batman_BeltRadio`) is now **required**: subscribe to it and enable it with this mod. On a dedicated server, add `3817018338` to `WorkshopItems=` and `batman_BeltRadio` to `Mods=`, otherwise the game does not load this mod. Signal Smoke is still required too.
+
 ## 0.4.0 — 2026-10-10
 
 ### Changed
