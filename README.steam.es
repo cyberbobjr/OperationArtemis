@@ -1,3 +1,6 @@
+[h1]CAMBIO INCOMPATIBLE — versión 0.4.1 (2026-10-10)[/h1]
+[b]Este mod ahora requiere [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]. Suscríbete y actívalo junto con este mod. Servidores dedicados: añade 3817018338 a WorkshopItems= y batman_BeltRadio a Mods=; si no, el juego no carga este mod (solo un aviso en el registro).[/b]
+
 [img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
 [i]«Si todo se tuerce, escucha el 108.0. De noche. Primero los números, luego la voz. — V.»[/i]

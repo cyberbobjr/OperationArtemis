@@ -1,3 +1,6 @@
+[h1]НЕСОВМЕСТИМОЕ ИЗМЕНЕНИЕ — версия 0.4.1 (2026-10-10)[/h1]
+[b]Теперь этому моду требуется [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]. Подпишитесь на него и включите вместе с этим модом. Выделенные серверы: добавьте 3817018338 в WorkshopItems= и batman_BeltRadio в Mods=, иначе игра не загрузит этот мод (в журнале будет только предупреждение).[/b]
+
 [img]https://raw.githubusercontent.com/cyberbobjr/OperationArtemis/main/docs/steam/01-operation-artemis.jpg[/img]
 
 [i]«Если всё пойдёт не так, слушай 108.0. Ночью. Сначала цифры, потом голос. — V.»[/i]
