@@ -363,11 +363,11 @@ les règles des appels d'extraction de l'acte III.
 ### Batterie à la ceinture — correctif du 2026-10-03
 
 Cette limite de batterie est corrigée dans les projets Artemis et MilitaryDrop.
-Ils embarquent une copie identique de
-`client/BatmanRadio/BatmanRadio_BeltBattery.lua`, au même chemin relatif.
-Cette collision est volontaire : n'importe laquelle des deux copies fournit
-le même module, avec un seul handler `OnTick`. Le lanceur Artemis vérifie leur
-égalité ; conserver cette égalité lors des prochaines modifications.
+Depuis 0.4.0, le module vient de Belt Walkie-Talkie (`batman_BeltRadio`) s'il
+est activé, sinon de la copie de secours de chaque mod
+(`client/Artemis/BeltRadioFallback/`, `client/MilitaryDrop/BeltRadioFallback/`) ;
+deux copies se remplacent : un seul handler `OnTick`. Le lanceur Artemis
+vérifie l'égalité de la copie avec Belt Walkie-Talkie.
 
 Sans Better Walkie Talkies actif, le gestionnaire appelle `DeviceData.update(false, true)` pour les radios
 portatives à pile accrochées dans l'inventaire principal, hors main/dos.
@@ -397,9 +397,10 @@ avec une pile presque vide. En MP, vérifier aussi la charge après reconnexion.
 
 ### Code commun et PTT Better Walkie Talkies — simplification du 2026-10-03
 
-La source unique est désormais `MilitaryDrop/source/radio/lua`, synchronisée
-dans les deux projets par `MilitaryDrop/source/radio/sync_radio.py` (contrôle
-avec `--check`). Artemis et MilitaryDrop inscrivent leurs chaînes dans le même
+La source unique est désormais le mod Belt Walkie-Talkie (dépôt `BeltRadio`) ;
+`BeltRadio/tools/sync_fallback.py` génère les copies de secours des deux
+projets (contrôle avec `--check`, depuis 0.4.0 ; avant :
+`MilitaryDrop/source/radio/sync_radio.py`, supprimé). Artemis et MilitaryDrop inscrivent leurs chaînes dans le même
 gestionnaire : un seul menu, wrapper et récepteur solo. En MP, la réception et
 la VOIP restent au vanilla/BWT. Aucune dépendance chargeable supplémentaire.
 
@@ -431,3 +432,15 @@ ne sont pas accessibles par l'API Lua publique en mode normal. Les transmissions
 directes hors du registre ne sont pas interceptées. Sources 42.21.0 vérifiées
 par empreinte du JAR installé ; 53 tests simulés réussis, aucun essai audio réel.
 Voir [les limites et essais vanilla du protocole commun](../../MilitaryDrop/dev/TEST-PROTOCOL.md#stations-vanilla-à-la-ceinture-en-solo--2026-10-03).
+
+### Belt Walkie-Talkie facultatif — 0.4.0 (2026-10-10)
+
+Redémarrage complet entre deux listes de mods ; dans `console.txt`, vérifier
+les mods chargés et l'absence de ligne `overrides media/lua/client/BatmanRadio`.
+
+| Cas | Attendu |
+|---|---|
+| Solo, Artemis seul : talkie militaire allumé à la ceinture sur 108,0 MHz, la nuit | Lignes ARTEMIS au-dessus du personnage ; « Options de l'appareil » ; appel d'extraction grisé (« prenez la radio en main ou portez-la sur le dos ») |
+| Solo, Artemis + Belt Walkie-Talkie | Même comportement ; page d'options sandbox **Belt Walkie-Talkie** ; aucune ligne `WARN` d'Artemis |
+| Solo, Artemis + Military Drop sans Belt Walkie-Talkie | Une seule ligne par message à la ceinture, pas de doublon |
+| MP en fin : talkie à la ceinture puis rangé | Ceinture : bulle radio ; rangé : chat radio seulement ; appel refusé à la ceinture |

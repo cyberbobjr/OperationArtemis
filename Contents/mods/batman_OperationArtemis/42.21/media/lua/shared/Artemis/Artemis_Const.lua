@@ -79,7 +79,7 @@ Const.RADIO = {
     -- Code porté par les lignes clés ; 4 caractères, donc ignoré par le vanilla (ISRadioInteractions.lua:216).
     SIGNAL_CODE = "ART1",
     -- Couleur des lignes, proche du vert pâle des transmissions militaires (aussi celle
-    -- de la bulle MP d'une radio non tenue, BatmanRadio_Core.onDeviceTextMP).
+    -- de la bulle MP d'un talkie à la ceinture, BatmanRadio_Core.onDeviceTextMP).
     LINE_COLOR = { r = 0.70, g = 0.85, b = 0.55 },
 }
 

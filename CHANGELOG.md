@@ -3,6 +3,14 @@
 This changelog starts with the initial repository snapshot. Earlier development
 is summarized below rather than reconstructed as separate releases.
 
+## 0.4.0 — 2026-10-10
+
+### Changed
+
+- Belt Walkie-Talkie (mod ID `batman_BeltRadio`) is now an optional companion mod: when it is enabled, Operation Artemis uses it for the walkie-talkie hooked on the belt (Device Options, listening in singleplayer, multiplayer bubble, battery) and its sandbox options; without it, the same behaviour stays built in. Signal Smoke remains the only required mod.
+- Multiplayer: the radio bubble is only added for a walkie-talkie hooked on the belt. A radio stored in the inventory no longer gets one (its lines still show in the radio chat, as in the vanilla game).
+- The extraction call from a walkie-talkie on the belt is refused by the same rule as in the author's other mods (same message: hold the radio in your hand or wear it on your back).
+
 ## 0.3.2 — 2026-10-09
 
 ### Fixed

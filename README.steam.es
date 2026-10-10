@@ -48,6 +48,8 @@ Activa Operation Artemis y [url=https://steamcommunity.com/sharedfiles/filedetai
 
 Project Zomboid Build 42.21. Probado en solitario; el multijugador y las integraciones opcionales aún necesitan su propia validación. Textos de la historia en español, inglés, francés, alemán, portugués, portugués de Brasil, ruso, turco, chino, japonés y coreano (en chino, japonés y coreano, los documentos del juego quedan en inglés). Finales con voz en inglés y francés.
 
+Se recomienda [b]Belt Walkie-Talkie[/b] (opcional): un mismo comportamiento del walkie-talkie en el cinturón para todos los mods que lo usan. Sin él, ese comportamiento viene integrado.
+
 [h2]APOYA EL PROYECTO[/h2]
 
 ¿Te gusta el escenario? Un café ayuda a financiar nuevas historias y actualizaciones.

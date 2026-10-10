@@ -38,6 +38,7 @@ description translations are maintained separately in `README.steam*`.
 |---|---|
 | Game | Project Zomboid **42.21**, the development and recorded test target |
 | Required mod | [Signal Smoke](https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882), Mod ID `batman_SignalSmoke` |
+| Optional mod | Belt Walkie-Talkie, Mod ID `batman_BeltRadio`: shared belt walkie-talkie behaviour; without it, the same behaviour is built in |
 | Operation Artemis Mod ID | `batman_OperationArtemis` |
 | Test harness | PZPuppeteer, only when running the documented test campaign |
 

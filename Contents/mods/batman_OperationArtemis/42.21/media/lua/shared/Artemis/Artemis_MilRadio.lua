@@ -11,7 +11,8 @@
 -- Le client désigne l'appareil par une référence ; le serveur la résout lui-même et revérifie tout.
 
 local MilRadio = {}
-local RadioCompat = require "BatmanRadio/BatmanRadio_Compat"
+-- Récepteur commun : Belt Walkie-Talkie s'il est activé, sinon la copie de secours embarquée.
+local RadioLib = require "Artemis/Artemis_RadioLib"
 
 MilRadio.MAX_WORLD_DISTANCE = 2
 
@@ -72,7 +73,10 @@ function MilRadio.status(player, object, channel, ignoreMic)
         return "notMilitary"
     end
     if MilRadio.isInventoryRadio(object) then
-        if not MilRadio.isCarried(player, object) then
+        -- Jamais depuis la ceinture ni rangée : prédicat commun à tous les mods (raison "belt" ou
+        -- "stowed"), même message qu'avant (prendre la radio en main ou la porter sur le dos).
+        local _, reason = RadioLib.canTransmitWith(player, object)
+        if reason == "belt" or reason == "stowed" or not MilRadio.isCarried(player, object) then
             return "notCarried"
         end
     elseif not MilRadio.isNear(player, object) then
@@ -85,7 +89,7 @@ function MilRadio.status(player, object, channel, ignoreMic)
     if data:getChannel() ~= channel then
         return "wrongFrequency"
     end
-    if not ignoreMic and not RadioCompat.microphoneAvailable(data) then
+    if not ignoreMic and not RadioLib.compat().microphoneAvailable(data) then
         return "micMuted"
     end
     return nil

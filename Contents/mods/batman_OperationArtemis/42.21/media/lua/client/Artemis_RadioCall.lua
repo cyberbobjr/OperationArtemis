@@ -8,7 +8,7 @@
 -- parasites.
 
 local Const = require "Artemis/Artemis_Const"
-local RadioCompat = require "BatmanRadio/BatmanRadio_Compat"
+local RadioLib = require "Artemis/Artemis_RadioLib"
 local Config = require "Artemis/Artemis_Config"
 local ClientState = require "Artemis/Artemis_ClientState"
 local State = require "Artemis/Artemis_State"
@@ -95,7 +95,7 @@ end
 local function onCall(player, device)
     local code = ClientState.get().callCode or DEFAULT_CALL_CODE
     local isFerry = isFerryCall(player)
-    RadioCompat.say(player, getText("IGUI_Artemis_Call_Say", code))
+    RadioLib.compat().say(player, getText("IGUI_Artemis_Call_Say", code))
     local command = isFerry and Const.COMMAND.CALL_FERRY or Const.COMMAND.CALL_EXTRACTION
     sendClientCommand(player, Const.NET_MODULE, command, { radio = MilRadio.makeRef(device) })
     later(REPLY_DELAY_MS, function() reply(device, isFerry) end)

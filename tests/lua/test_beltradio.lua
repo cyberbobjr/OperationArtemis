@@ -1,5 +1,6 @@
--- Récepteur radio commun (copie de BatmanRadio_Core) et chaîne Artemis : ligne affichée pour
--- un talkie accroché à la ceinture en solo, bulle MP d'une radio non tenue.
+-- Récepteur radio commun (copie de secours de Belt Walkie-Talkie, Artemis/BeltRadioFallback) et
+-- chaîne Artemis : ligne affichée pour un talkie accroché à la ceinture en solo, bulle MP d'un
+-- talkie à la ceinture (pas d'une radio rangée).
 
 local T = {}
 
@@ -120,7 +121,7 @@ function T.setup()
     ISRadioAndTvMenu = { openRadioPanel = function() end }
     preloadModule("ISUI/ISRadioAndTvMenu", true)
     preloadModule("RadioCom/ISRadioWindow", true)
-    preloadModule("BatmanRadio/BatmanRadio_BeltBattery", true) -- batterie : hors sujet ici
+    preloadModule("Artemis/BeltRadioFallback/BatmanRadio_BeltBattery", true) -- batterie : hors sujet ici
     SUPPORT = require "Artemis_BeltRadio"
 end
 
@@ -158,12 +159,12 @@ local function mpLine(radios, text)
     end
 end
 
-function T.mp_unheld_radio_on_the_sandbox_frequency_gets_one_bubble()
+function T.mp_belt_radio_on_the_sandbox_frequency_gets_one_bubble()
     local belt, pocket = makeRadio(), makeRadio()
     PLAYER.attached = { belt }
     mpLine({ belt, pocket }, "Relais Artemis")
     assertEq(#belt.shown + #pocket.shown, 0, "vanilla : chat radio seulement")
-    assertEq(#PLAYER.bubbles, 1, "une bulle pour deux radios non tenues")
+    assertEq(#PLAYER.bubbles, 1, "une bulle, celle du talkie à la ceinture")
     assertEq(PLAYER.bubbles[1].tag, "radio", "bulle radio")
     assertEq(PLAYER.bubbles[1].r, 0.70, "couleur de la chaîne Artemis")
 end
@@ -175,13 +176,24 @@ function T.mp_held_radio_and_bwt_add_nothing_other_channels_get_a_white_bubble()
     assertEq(#hand.shown, 1, "bulle vanilla de la radio en main")
     assertEq(#PLAYER.bubbles, 0, "pas de doublon")
     PLAYER.hand = nil
-    mpLine({ makeRadio(98000) }, "Météo")
+    local other = makeRadio(98000)
+    PLAYER.attached = { other }
+    mpLine({ other }, "Météo")
     assertEq(#PLAYER.bubbles, 1, "chaîne vanilla : bulle aussi (toutes les chaînes)")
     assertEq(PLAYER.bubbles[1].r, 1, "couleur par défaut")
     PLAYER.bubbles = {}
     ACTIVE = { "\\BetterWalkieTalkies" }
-    mpLine({ makeRadio() }, "Relais Artemis")
+    local belt = makeRadio()
+    PLAYER.attached = { belt }
+    mpLine({ belt }, "Relais Artemis")
     assertEq(#PLAYER.bubbles, 0, "Better Walkie Talkies actif : rien ajouté")
+end
+
+function T.mp_stowed_radio_gets_no_bubble()
+    -- Une radio rangée ne reçoit rien (décision commune) : en MP le vanilla la sert quand même au
+    -- chat radio, sans bulle ajoutée.
+    mpLine({ makeRadio() }, "Relais Artemis")
+    assertEq(#PLAYER.bubbles, 0, "radio rangée : chat radio seulement")
 end
 
 return T
