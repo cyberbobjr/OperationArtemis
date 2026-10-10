@@ -168,7 +168,7 @@ function T.mp_unheld_radio_on_the_sandbox_frequency_gets_one_bubble()
     assertEq(PLAYER.bubbles[1].r, 0.70, "couleur de la chaîne Artemis")
 end
 
-function T.mp_nothing_added_for_a_held_radio_another_frequency_or_bwt()
+function T.mp_held_radio_and_bwt_add_nothing_other_channels_get_a_white_bubble()
     local hand = makeRadio()
     PLAYER.hand = hand
     mpLine({ hand }, "Relais Artemis")
@@ -176,7 +176,9 @@ function T.mp_nothing_added_for_a_held_radio_another_frequency_or_bwt()
     assertEq(#PLAYER.bubbles, 0, "pas de doublon")
     PLAYER.hand = nil
     mpLine({ makeRadio(98000) }, "Météo")
-    assertEq(#PLAYER.bubbles, 0, "chaîne vanilla laissée au vanilla")
+    assertEq(#PLAYER.bubbles, 1, "chaîne vanilla : bulle aussi (toutes les chaînes)")
+    assertEq(PLAYER.bubbles[1].r, 1, "couleur par défaut")
+    PLAYER.bubbles = {}
     ACTIVE = { "\\BetterWalkieTalkies" }
     mpLine({ makeRadio() }, "Relais Artemis")
     assertEq(#PLAYER.bubbles, 0, "Better Walkie Talkies actif : rien ajouté")

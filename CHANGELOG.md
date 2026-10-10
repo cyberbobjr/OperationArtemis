@@ -8,7 +8,7 @@ is summarized below rather than reconstructed as separate releases.
 ### Fixed
 
 - Singleplayer: a walkie-talkie switched on and clipped to the belt received the ARTEMIS broadcasts but showed nothing on screen. Each line is shown again above your character, once, as with a radio in hand.
-- Multiplayer: a radio carried in the main inventory but not held (belt included) now also shows the ARTEMIS lines above your character, once, instead of only in the radio chat. Nothing is added when Better Walkie Talkies is active.
+- Multiplayer: a radio carried in the main inventory but not held (belt included) now also shows the lines it receives above your character, once, instead of only in the radio chat: ARTEMIS and every other channel on its frequency. Messages from other players stay in the radio chat. Nothing is added when Better Walkie Talkies is active.
 
 ## 0.3.1 — 2026-10-07
 
