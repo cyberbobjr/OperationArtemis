@@ -48,7 +48,7 @@ Active Operation Artemis et [url=https://steamcommunity.com/sharedfiles/filedeta
 
 Project Zomboid Build 42.21. Testé en solo ; le multijoueur et les intégrations optionnelles doivent encore être validés. Textes de l'histoire en français, anglais, allemand, espagnol, portugais, portugais du Brésil, russe, turc, chinois, japonais et coréen (en chinois, japonais et coréen, les documents en jeu restent en anglais). Fins narrées en français et en anglais.
 
-[b]Belt Walkie-Talkie[/b] (facultatif) est recommandé : un même comportement du talkie-walkie à la ceinture pour tous les mods qui l'utilisent. Sans lui, ce comportement est intégré.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url] (facultatif) est recommandé : un même comportement du talkie-walkie à la ceinture pour tous les mods qui l'utilisent. Sans lui, ce comportement est intégré.
 
 [h2]SOUTENIR LE PROJET[/h2]
 

@@ -51,7 +51,7 @@ description=[h2]GOOD TO KNOW[/h2]
 description=
 description=Project Zomboid Build 42.21. Tested in singleplayer; multiplayer and optional integrations still need their own validation. Story text in English, French, German, Spanish, Portuguese, Brazilian Portuguese, Russian, Turkish, Chinese, Japanese and Korean (in Chinese, Japanese and Korean the in-game documents stay in English). Voiced endings in English and French.
 description=
-description=[b]Belt Walkie-Talkie[/b] (optional) is recommended: one shared belt walkie-talkie behaviour for all the mods that use it. Without it, the same behaviour is built in.
+description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url] (optional) is recommended: one shared belt walkie-talkie behaviour for all the mods that use it. Without it, the same behaviour is built in.
 description=
 description=[h2]SUPPORT THE PROJECT[/h2]
 description=
