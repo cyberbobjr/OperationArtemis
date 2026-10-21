@@ -54,6 +54,8 @@ description=[h2]GOOD TO KNOW[/h2]
 description=
 description=Project Zomboid Build 42.21. Tested in singleplayer; multiplayer and optional integrations still need their own validation. Story text in English, French, German, Spanish, Portuguese, Brazilian Portuguese, Russian, Turkish, Chinese, Japanese and Korean (in Chinese, Japanese and Korean the in-game documents stay in English). Voiced endings in English and French.
 description=
+description=Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882][b]Signal Smoke[/b][/url]: the green smoke and flares that mark the story's meeting points.
+description=
 description=Requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]: the shared belt walkie-talkie behaviour of all the mods that use it.
 description=
 description=[h2]Discord[/h2]
