@@ -1,5 +1,5 @@
 -- Opération Artemis : pont avec Military Drop (même auteur), contrat « Military Drop transporte,
--- Artemis raconte » (MilitaryDrop/docs/analyses/idee-10-extraction.md, décisions de la phase 4).
+-- Artemis raconte » (MilitaryDrop/docs/annexes/recherches/idee-10-extraction.md, décisions de la phase 4).
 -- Événements Lua partagés, déclarés par chaque mod (LuaEventManager.AddEvent est idempotent,
 -- LuaEventManager.java:615-631) :
 --   batman_OnExtractionAvailable(provider)  serveur : un mod annonce qu'il assure le transport

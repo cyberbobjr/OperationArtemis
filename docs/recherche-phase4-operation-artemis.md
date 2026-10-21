@@ -22,7 +22,7 @@ Deux recherches Opus en lecture seule du 2026-09-30 (Java 42.21 décompilé, Lua
 
 ## Military Drop (projet `Workshop\MilitaryDrop`)
 
-- Son analyse `docs/analyses/idee-10-extraction.md` propose le contrat « Artemis raconte, Military Drop transporte » : détection douce, événements `batman_OnExtractionAvailable`, `batman_OnExtraction(username, info)`, `batman_OnExtractionSummary(lignes, joueur)`, fréquences réservées de part et d'autre (108,0 / 151,4 / 112,2 HEF).
+- Son analyse `docs/annexes/recherches/idee-10-extraction.md` propose le contrat « Artemis raconte, Military Drop transporte » : détection douce, événements `batman_OnExtractionAvailable`, `batman_OnExtraction(username, info)`, `batman_OnExtractionSummary(lignes, joueur)`, fréquences réservées de part et d'autre (108,0 / 151,4 / 112,2 HEF).
 - L'extraction de Military Drop **n'est pas encore codée** (idée 10 du plan V2).
 
 ## Recherche complémentaire (2026-09-30, troisième sous-agent Opus)

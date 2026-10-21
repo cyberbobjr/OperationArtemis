@@ -413,7 +413,7 @@ scénario préservent le mode vocal et les micros avant/après leur transmission
 BWT (variante 42.20) ; le réseau et l'audio restent simulés. La suite complète
 MilitaryDrop passe également. Les essais en jeu 42.21 (deux clients, VOIP à
 distance et reconnexion) restent à effectuer selon
-[le protocole commun](../../MilitaryDrop/dev/TEST-PROTOCOL.md#compatibilité-better-walkie-talkies-et-code-commun--2026-10-03).
+[le protocole commun](../../MilitaryDrop/docs/annexes/tests/test-protocol.md#compatibilité-better-walkie-talkies-et-code-commun--2026-10-03).
 
 ### Stations vanilla à la ceinture — extension du 2026-10-03
 
@@ -431,7 +431,7 @@ le brouillage scénarisé de Louisville n'est pas reproduit. Ces données privé
 ne sont pas accessibles par l'API Lua publique en mode normal. Les transmissions
 directes hors du registre ne sont pas interceptées. Sources 42.21.0 vérifiées
 par empreinte du JAR installé ; 53 tests simulés réussis, aucun essai audio réel.
-Voir [les limites et essais vanilla du protocole commun](../../MilitaryDrop/dev/TEST-PROTOCOL.md#stations-vanilla-à-la-ceinture-en-solo--2026-10-03).
+Voir [les limites et essais vanilla du protocole commun](../../MilitaryDrop/docs/annexes/tests/test-protocol.md#stations-vanilla-à-la-ceinture-en-solo--2026-10-03).
 
 ### Belt Walkie-Talkie facultatif — 0.4.0 (2026-10-10)
 

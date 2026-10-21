@@ -73,7 +73,7 @@ function RadioLib.receiver()
 end
 
 -- Prédicat d'émission commun (jamais depuis la ceinture). Renvoie true, ou false et une raison
--- ("belt", "stowed"...) : voir BatmanRadioSupport.canTransmitWith (docs/API.md de Belt Walkie-Talkie).
+-- ("belt", "stowed"...) : voir BatmanRadioSupport.canTransmitWith (docs/specifications-techniques/api-publique.md de Belt Walkie-Talkie).
 function RadioLib.canTransmitWith(player, radio)
     local support = RadioLib.support()
     if support and support.canTransmitWith then
