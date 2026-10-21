@@ -3,8 +3,8 @@
     python tests/run_lua_tests.py
 
 1. syntaxe Lua 5.1 de tous les fichiers Lua du mod (Kahlua suit Lua 5.1) ;
-2. copie de secours de Belt Walkie-Talkie (Artemis/BeltRadioFallback) identique à ce qu'en
-   génère ../BeltRadio/tools/sync_fallback.py (ignoré sans le dépôt BeltRadio) ;
+2. Belt Walkie-Talkie (prérequis) : aucune copie dans le mod, vrai récepteur lu dans le dépôt
+   voisin ../BeltRadio (variable BELT_RADIO_LUA) pour les tests radio ;
 3. cas de test tests/lua/test_*.lua sous lupa : chaque cas tourne dans un runtime
    neuf, l'API du jeu est simulée par le fichier de test, les fichiers du mod sont
    chargés avec loadMod() ou require "Artemis/...", les fichiers vanilla avec
@@ -30,7 +30,8 @@ PZ_MEDIA = Path(os.environ.get("PZ_MEDIA", r"D:\SteamLibrary\steamapps\common\Pr
 VANILLA_LUA = PZ_MEDIA / "lua"
 TESTS = Path(__file__).resolve().parent / "lua"
 WORKSPACE = REPO.parent
-BELT_RADIO_TOOL = WORKSPACE / "BeltRadio" / "tools" / "sync_fallback.py"
+BELT_RADIO_LUA = Path(os.environ.get(
+    "BELT_RADIO_LUA", WORKSPACE / "BeltRadio" / "Contents" / "mods" / "batman_BeltRadio" / "42.21" / "media" / "lua"))
 
 PRELUDE = r"""
 -- Kahlua n'a pas next() (pairs fonctionne sans elle).
@@ -58,14 +59,21 @@ function loadVanilla(rel)
     return true
 end
 
--- require du jeu : module du mod (shared, server puis client), sinon fichier vanilla
--- (shared, client, server), chargé une fois.
+-- require du jeu : module du mod (shared, server puis client), sinon de Belt Walkie-Talkie
+-- (BatmanRadio/..., dépôt voisin), sinon fichier vanilla (shared, client, server), chargé une fois.
 local loaded = {}
 require = function(name)
     if loaded[name] ~= nil then return loaded[name] end
     for _, scope in ipairs({ "shared/", "server/", "client/" }) do
         if readModFile(scope .. name .. ".lua") then
             loaded[name] = loadMod(scope .. name .. ".lua") or true
+            return loaded[name]
+        end
+    end
+    for _, scope in ipairs({ "shared/", "client/", "server/" }) do
+        local source = readBeltRadioFile(scope .. name .. ".lua")
+        if source then
+            loaded[name] = run(source, "BeltRadio/" .. scope .. name .. ".lua") or true
             return loaded[name]
         end
     end
@@ -109,6 +117,8 @@ def new_runtime():
     # Fichier d'un autre projet du même dossier (Military Drop...) ; nil s'il est absent.
     g.readSiblingFile = lambda project, rel: _read(WORKSPACE / str(project), rel)
     g.readVanillaFile = lambda rel: _read(VANILLA_LUA, rel)
+    g.readBeltRadioFile = lambda rel: _read(BELT_RADIO_LUA, rel)
+    g.hasBeltRadio = (BELT_RADIO_LUA / "client/BatmanRadio/BatmanRadio_Core.lua").is_file()
     g.hasVanilla = VANILLA_LUA.is_dir()
     lua.execute(PRELUDE)
     return lua
@@ -125,19 +135,18 @@ def syntax_errors():
     return errors
 
 
-def fallback_errors():
-    """Écarts de la copie de secours de Belt Walkie-Talkie ; None si le dépôt BeltRadio est absent."""
-    errors = [f"{scope}/BatmanRadio : chemin du mod commun, masquerait Belt Walkie-Talkie"
-              for scope in ("client", "shared", "server") if (MOD_LUA / scope / "BatmanRadio").exists()]
-    if not BELT_RADIO_TOOL.is_file():
-        return errors or None
-    sys.path.insert(0, str(BELT_RADIO_TOOL.parent))
-    try:
-        import sync_fallback  # noqa: E402
-    finally:
-        sys.path.pop(0)
-    return errors + [e + " (python ../BeltRadio/tools/sync_fallback.py OperationArtemis)"
-                     for e in sync_fallback.check("OperationArtemis")]
+def belt_radio_errors():
+    """Belt Walkie-Talkie est un prérequis : aucune copie dans le mod, dépôt voisin présent."""
+    errors = []
+    for scope in ("client", "shared", "server"):
+        if (MOD_LUA / scope / "BatmanRadio").exists():
+            errors.append(f"{scope}/BatmanRadio : chemin du mod commun, masquerait Belt Walkie-Talkie")
+        if (MOD_LUA / scope / "Artemis" / "BeltRadioFallback").exists():
+            errors.append(f"{scope}/Artemis/BeltRadioFallback : copie de secours retirée, ne pas la remettre")
+    if not (BELT_RADIO_LUA / "client" / "BatmanRadio" / "BatmanRadio_Core.lua").is_file():
+        errors.append(f"Belt Walkie-Talkie introuvable ({BELT_RADIO_LUA}) : dépôt voisin ../BeltRadio"
+                      " ou variable BELT_RADIO_LUA (tests radio ignorés)")
+    return errors
 
 
 def run_file(path):
@@ -168,12 +177,10 @@ def main():
     for error in errors:
         print("SYNTAXE", error)
     failures += len(errors)
-    fallback = fallback_errors()
-    if fallback is None:
-        print("IGNORÉ copie de secours Belt Walkie-Talkie (dépôt BeltRadio absent)")
-    for error in fallback or []:
-        print("ÉCHEC  copie de secours :", error)
-    failures += len(fallback or [])
+    belt = belt_radio_errors()
+    for error in belt:
+        print("ÉCHEC  Belt Walkie-Talkie :", error)
+    failures += len(belt)
     passed = skipped = 0
     for path in sorted(TESTS.glob("test_*.lua")):
         for name, error, was_skipped in run_file(path):

@@ -11,7 +11,7 @@
 -- Le client désigne l'appareil par une référence ; le serveur la résout lui-même et revérifie tout.
 
 local MilRadio = {}
--- Récepteur commun : Belt Walkie-Talkie s'il est activé, sinon la copie de secours embarquée.
+-- Récepteur commun : Belt Walkie-Talkie, prérequis du mod.
 local RadioLib = require "Artemis/Artemis_RadioLib"
 
 MilRadio.MAX_WORLD_DISTANCE = 2

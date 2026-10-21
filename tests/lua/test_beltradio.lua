@@ -1,8 +1,9 @@
--- Récepteur radio commun (copie de secours de Belt Walkie-Talkie, Artemis/BeltRadioFallback) et
--- chaîne Artemis : ligne affichée pour un talkie accroché à la ceinture en solo, bulle MP d'un
--- talkie à la ceinture (pas d'une radio rangée).
+-- Récepteur radio commun (vrai Belt Walkie-Talkie, prérequis, lu dans le dépôt voisin ../BeltRadio ;
+-- cas ignorés sans lui) et chaîne Artemis : ligne affichée pour un talkie accroché à la ceinture en
+-- solo, bulle MP d'un talkie à la ceinture (pas d'une radio rangée), émission refusée à la ceinture.
 
 local T = {}
+T.skip = not hasBeltRadio and "dépôt BeltRadio absent (prérequis Belt Walkie-Talkie)" or nil
 
 local FREQ = 108000
 
@@ -85,7 +86,8 @@ function T.setup()
     UIFont = { Medium = "Medium" }
     NOW = 1000
     getTimestampMs = function() return NOW end
-    SandboxVars = {}
+    -- Son et bruit à la ceinture de Belt Walkie-Talkie : hors sujet ici.
+    SandboxVars = { BeltRadio = { BeltAudio = false, BeltNoise = false } }
     INVENTORY = {}
     PLAYER = { attached = {}, bubbles = {} }
     PLAYER.getInventory = function() return INVENTORY end
@@ -121,7 +123,7 @@ function T.setup()
     ISRadioAndTvMenu = { openRadioPanel = function() end }
     preloadModule("ISUI/ISRadioAndTvMenu", true)
     preloadModule("RadioCom/ISRadioWindow", true)
-    preloadModule("Artemis/BeltRadioFallback/BatmanRadio_BeltBattery", true) -- batterie : hors sujet ici
+    preloadModule("BatmanRadio/BatmanRadio_BeltBattery", true) -- batterie : hors sujet ici
     SUPPORT = require "Artemis_BeltRadio"
 end
 
@@ -194,6 +196,40 @@ function T.mp_stowed_radio_gets_no_bubble()
     -- chat radio, sans bulle ajoutée.
     mpLine({ makeRadio() }, "Relais Artemis")
     assertEq(#PLAYER.bubbles, 0, "radio rangée : chat radio seulement")
+end
+
+--- Talkie militaire simulé (WalkieTalkie5) allumé sur la fréquence Artemis.
+local function militaryRadio()
+    local data = {}
+    for name, value in pairs({ getIsHighTier = true, getIsTwoWay = true, getIsPortable = true,
+        getIsTelevision = false, isNoTransmit = false, getIsTurnedOn = true, getIsBatteryPowered = false,
+        getMicIsMuted = false, getChannel = 108000 }) do
+        data[name] = function() return value end
+    end
+    return { kind = "Radio", getDeviceData = function() return data end }
+end
+
+function T.belt_radio_never_transmits()
+    local MilRadio = require "Artemis/Artemis_MilRadio"
+    local radio = militaryRadio()
+    local where = "belt"
+    local player = {
+        getPrimaryHandItem = function() return where == "hand" and radio or nil end,
+        getSecondaryHandItem = function() end,
+        getClothingItem_Back = function() return where == "back" and radio or nil end,
+        isAttachedItem = function() return where == "belt" end,
+    }
+    assertEq(MilRadio.status(player, radio, 108000), "notCarried", "ceinture : même message qu'avant")
+    local RadioLib = require "Artemis/Artemis_RadioLib"
+    local ok, reason = RadioLib.canTransmitWith(player, radio)
+    assertEq(ok, false, "prédicat commun : refus")
+    assertEq(reason, "belt", "raison belt")
+    where = "bag"
+    assertEq(MilRadio.status(player, radio, 108000), "notCarried", "rangée : refus")
+    where = "hand"
+    assertEq(MilRadio.status(player, radio, 108000), nil, "en main : appel possible")
+    where = "back"
+    assertEq(MilRadio.status(player, radio, 108000), nil, "sur le dos : appel possible")
 end
 
 return T

@@ -1,11 +1,11 @@
 -- Artemis inscrit uniquement sa chaîne dans le gestionnaire commun de ceinture : Belt Walkie-Talkie
--- (batman_BeltRadio) s'il est activé, sinon la copie de secours embarquée (Artemis_RadioLib) ; même
--- globale BatmanRadioSupport dans les deux cas. Le même gestionnaire fonctionne avec ou sans
+-- (batman_BeltRadio, prérequis du mod, par Artemis_RadioLib), globale BatmanRadioSupport. Le même
+-- gestionnaire fonctionne avec ou sans
 -- Military Drop et laisse BWT gérer la batterie et la VOIP quand il est actif.
 local Const = require "Artemis/Artemis_Const"
 local Config = require "Artemis/Artemis_Config"
 local RadioLib = require "Artemis/Artemis_RadioLib"
--- Charge le récepteur (mod commun ou copie de secours) avant l'inscription.
+-- Charge le récepteur de Belt Walkie-Talkie avant l'inscription.
 local Support = RadioLib.receiver()
 BatmanArtemisBeltRadio = Support
 
