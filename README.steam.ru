@@ -53,6 +53,11 @@ Project Zomboid Build 42.21. Проверено в одиночной игре; 
 
 Требуется [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]: единое поведение рации на поясе для всех модов, которые его используют.
 
+[h2]Discord[/h2]
+
+Вопросы, ошибки или идеи? Присоединяйтесь к Discord:
+[url=https://discord.gg/QEsBya7hUA]https://discord.gg/QEsBya7hUA[/url]
+
 [h2]ПОДДЕРЖАТЬ ПРОЕКТ[/h2]
 
 Понравился сценарий? Чашка кофе поможет финансировать новые истории и обновления.

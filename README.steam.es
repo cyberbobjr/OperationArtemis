@@ -53,6 +53,11 @@ Project Zomboid Build 42.21. Probado en solitario; el multijugador y las integra
 
 Requiere [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]: el comportamiento común del walkie-talkie en el cinturón para todos los mods que lo usan.
 
+[h2]Discord[/h2]
+
+¿Preguntas, errores o ideas? Únete al Discord:
+[url=https://discord.gg/QEsBya7hUA]https://discord.gg/QEsBya7hUA[/url]
+
 [h2]APOYA EL PROYECTO[/h2]
 
 ¿Te gusta el escenario? Un café ayuda a financiar nuevas historias y actualizaciones.
