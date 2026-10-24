@@ -15,7 +15,7 @@ Mise à jour du 2026-10-01 : phase 3 en partie validée (jalon J1), phase 4 (hé
 
 ## À lire d'abord, dans cet ordre
 
-1. `CLAUDE.md` et l'index `.claude/pz-knowledge/README.md`. Surtout : `world-placement.md`, `world-map.md`, `power-and-lights.md`, `staging-effects.md`, `quest-building-blocks.md`, `radio-dynamic.md`, `knox-geography.md`, `kahlua-lua.md`, `logs-and-tools.md`.
+1. `AGENTS.md` et l'index `.claude/pz-knowledge/README.md`. Surtout : `world-placement.md`, `world-map.md`, `power-and-lights.md`, `staging-effects.md`, `quest-building-blocks.md`, `radio-dynamic.md`, `knox-geography.md`, `kahlua-lua.md`, `logs-and-tools.md`.
 2. `OperationArtemis/docs/conception-operation-artemis.md` : section 0 (cible et feuille de route), 4 bis (mise en scène décidée effet par effet), « Décisions de la phase 3 », 7 (plans détaillés, dont « Plan de la phase 3 », et **journal de développement**).
 3. Protocoles : `OperationArtemis/docs/test-phase3-operation-artemis.md` (P01-P13, à faire) ; les protocoles des phases 1 et 2 sont clos.
 4. Le code du mod : `C:\Users\cyber\Zomboid\Workshop\OperationArtemis\Contents\mods\batman_OperationArtemis\` (id `batman_OperationArtemis`, dossiers `common` et `42.21`, 49 fichiers Lua, `sandbox-options.txt`, `scripts/Artemis_items.txt`, traductions FR et EN). Projet local depuis le 2026-09-29 (`OperationArtemis\workshop.txt` privé, sans `id=` ni aperçu) ; l'ancien dossier `C:\Users\cyber\Zomboid\mods\batman_OperationArtemis` a été **déplacé**, pas copié : ne jamais le recréer (deux mods de même id se gêneraient).

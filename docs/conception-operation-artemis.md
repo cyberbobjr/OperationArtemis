@@ -337,7 +337,7 @@ versionMin=42.21
 
 Aucun `require` dur. Les intégrations sont détectées par `getActivatedMods()` et par la présence des tables (`SN`, `BoatCoreMP`, `AquaConfig`, `ComputerModComputerTypes`, `ComputerModLaptop`…) ou des objets de script (`getScriptManager():FindItem`). La table `ComputerMod` n'existe pas (relevé du 2026-10-01).
 
-> Nommage : la règle `batman_` + `Fix`/`Compatibility` de `CLAUDE.md` vise les **mods de correctif**. Ce mod est un mod de contenu. Je propose le préfixe `batman_` sans `Fix`, à valider.
+> Nommage : la règle `batman_` + `Fix`/`Compatibility` de `AGENTS.md` vise les **mods de correctif**. Ce mod est un mod de contenu. Je propose le préfixe `batman_` sans `Fix`, à valider.
 
 ### Découpage (fichiers courts, une responsabilité chacun)
 
