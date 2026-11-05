@@ -53,16 +53,20 @@ Project Zomboid Build 42.21. Проверено в одиночной игре; 
 
 Требуется [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882][b]Signal Smoke[/b][/url]: зелёный дым и сигнальные огни, отмечающие места встреч в сюжете.
 
-Требуется [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]: единое поведение рации на поясе для всех модов, которые его используют.
+Требуется [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338][b]Belt Walkie-Talkie[/b][/url]: общая рация на поясе.
 
 [h2]Discord[/h2]
 
 Вопросы, ошибки или идеи? Присоединяйтесь к Discord:
 [url=https://discord.gg/QEsBya7hUA]https://discord.gg/QEsBya7hUA[/url]
 
+[h2]НЕСКОЛЬКО СЛОВ ОБ ИИ[/h2]
+
+Я давно разработчик и делал моды задолго до ИИ-агентов — часто в ущерб времени с семьёй. Я открыто использую Claude Code и Codex: каждая функция обсуждается, проектируется и планируется, а не пишется вслепую. ИИ пришёл надолго; я выбрал адаптацию, а не сопротивление. Спасибо всем, кто выступил против личных нападок.
+
 [h2]ПОДДЕРЖАТЬ ПРОЕКТ[/h2]
 
-Понравился сценарий? Чашка кофе поможет финансировать новые истории и обновления.
+Понравился сценарий? Кофе поможет новым историям и обновлениям.
 
 [url=https://ko-fi.com/Z8Z8QJV31][img]https://storage.ko-fi.com/cdn/kofi6.png?v=6[/img][/url]
 

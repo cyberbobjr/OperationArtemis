@@ -60,6 +60,10 @@ Requiere [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817018338]
 ¿Preguntas, errores o ideas? Únete al Discord:
 [url=https://discord.gg/QEsBya7hUA]https://discord.gg/QEsBya7hUA[/url]
 
+[h2]UNA NOTA SOBRE LA IA[/h2]
+
+Soy desarrollador desde hace años y creaba mods mucho antes de que existieran los agentes de programación, a menudo a costa del tiempo con mi familia. Uso abiertamente Claude Code y Codex: cada función se sigue discutiendo, diseñando y planificando, no se hace a ciegas con «vibe coding». La IA ha llegado para quedarse; he elegido adaptarme en lugar de resistirme. Gracias a todos los que se opusieron a los ataques personales.
+
 [h2]APOYA EL PROYECTO[/h2]
 
 ¿Te gusta el escenario? Un café ayuda a financiar nuevas historias y actualizaciones.
