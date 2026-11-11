@@ -1,6 +1,6 @@
 -- Fresh dedicated solo 42.21 save, updated engine/mod loaded after full restart.
 -- External collect_results.py --watch required before this command.
--- PZPuppet.runBatchFile("OperationArtemis/campagne_route.lua",{playerIndex=0},{route="passeur"})
+-- PZDevKit.Scenario.runBatchFile("OperationArtemis/campagne_route.lua",{playerIndex=0},{route="passeur"})
 -- Loading constructs a plan only. Every child uses its own actions/assertions/finally.
 return function(params)
     local route=params.route or "passeur"

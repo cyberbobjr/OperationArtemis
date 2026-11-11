@@ -1,14 +1,14 @@
 -- Teaser Operation Artemis v2 (decoupage : TEASER.md). Actions reelles, menaces causees a l'image.
--- PZPuppet.runFile("OperationArtemisTrailer/teaser.lua",{playerIndex=0},{shot="01_carnet"})
--- Ne recharge jamais PZPuppet_Core ici (voir film.lua) : PZDirector/tools/tournage.py --reload.
-require "PZDirector/PZDirector_Core"
-require "PZDirector/PZDirector_Staging"
-assert(not PZPuppet.status() or PZPuppet.status().status~="running","Arreter la prise precedente")
-assert(PZDirector.production and PZPuppet.Scenario.teleport,"Modules de tournage non charges")
+-- PZDevKit.Scenario.runFile("OperationArtemisTrailer/teaser.lua",{playerIndex=0},{shot="01_carnet"})
+-- Tourne avec `pzdev film source/promo/teaser.lua -P shot=01_carnet` ; ne recharge jamais PZDevKit/Scenario ici (voir film.lua).
+require "PZDevKit/Production"
+require "PZDevKit/Staging"
+assert(not PZDevKit.Scenario.status() or PZDevKit.Scenario.status().status~="running","Arreter la prise precedente")
+assert(PZDevKit.Production.production and PZDevKit.Scenario.Scenario.teleport,"Modules de tournage non charges")
 
 return function(params)
     params=params or {}
-    local P,D=PZPuppet,PZDirector
+    local P,D=PZDevKit.Scenario,PZDevKit.Production
     local Story=require "Artemis/Artemis_Story"
     local Const=require "Artemis/Artemis_Const"
     local Smoke=require "SignalSmoke/SignalSmoke"

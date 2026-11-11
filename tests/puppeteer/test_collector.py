@@ -7,16 +7,16 @@ from collect_results import run_command, completed_segment
 root=Path(__file__).resolve().parent
 lua=lua51.LuaRuntime()
 compile_only=lua.eval('function(s) local f,e=loadstring(s); assert(f,e) end')
-old='PZPuppet.runFile("OperationArtemis/03_bunker.lua",{playerIndex=0},{testSave="old",resume=true})'
+old='PZDevKit.Scenario.runFile("OperationArtemis/03_bunker.lua",{playerIndex=0},{testSave="old",resume=true})'
 fresh=run_command(old,'PZPuppet_Artemis_Negatifs',False)
 assert 'resume=' not in fresh and 'old' not in fresh and 'PZPuppet_Artemis_Negatifs' in fresh
 compile_only(fresh)
 resumed=run_command(fresh,'new-save',True)
 assert resumed.count('resume=true')==1 and 'Negatifs' not in resumed
 compile_only(resumed)
-custom='PZPuppet.runFile("OperationArtemis/21_computer_contenus.lua",{playerIndex=0},{laptop=true,testSave="old",resume=true})'
+custom='PZDevKit.Scenario.runFile("OperationArtemis/21_computer_contenus.lua",{playerIndex=0},{laptop=true,testSave="old",resume=true})'
 assert 'laptop=true' in run_command(custom,'new',False)
-param=run_command('PZPuppet.runFile("OperationArtemis/14_fin_checkpoint.lua",{playerIndex=0},{completedQuarantine=true})','test',False)
+param=run_command('PZDevKit.Scenario.runFile("OperationArtemis/14_fin_checkpoint.lua",{playerIndex=0},{completedQuarantine=true})','test',False)
 assert 'completedQuarantine' not in param
 param=run_command(param,'test',False,{'completedQuarantine':True})
 assert 'completedQuarantine=true' in param

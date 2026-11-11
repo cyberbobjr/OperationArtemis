@@ -1,7 +1,7 @@
 -- Read-only diagnostic, separate from the nominal campaign and its statuses.
--- PZPuppet.runFile("OperationArtemis/diagnostic_porte_base.lua",{playerIndex=0},{testSave="2026-10-03_18-48-28"})
+-- PZDevKit.Scenario.runFile("OperationArtemis/diagnostic_porte_base.lua",{playerIndex=0},{testSave="2026-10-03_18-48-28"})
 return function(params)
-    local s=PZPuppet.scenario("ArtemisDiagnostic/porte_base")
+    local s=PZDevKit.Scenario.scenario("ArtemisDiagnostic/porte_base")
     s:check("PRE: solo debug Build 42.21",function()
         local version=tostring(getCore():getVersionNumber())
         return isDebugEnabled() and not isClient() and not isServer()

@@ -4,18 +4,19 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import re
+import os
 import subprocess
-from lupa import lua51
+import sys
 
 ROOT=Path(__file__).resolve().parent
-ENGINE=ROOT.parents[2]/'PZPuppeteer/Contents/mods/batman_PZPuppeteer/42.21/media/lua/client/PZPuppet/PZPuppet_Core.lua'
+ENGINE_TESTS=ROOT.parents[2]/'PZDevKit/tests'
 
 def main():
-    vm=lua51.LuaRuntime(unpack_returned_tuples=True)
-    vm.execute(ENGINE.read_text(encoding='utf-8'))
-    vm.execute('require=function() end; Events={OnDisconnect={Add=function() end}}')
-    for file in ('PZPuppet_Game.lua','PZPuppet_Debug.lua'):
-        vm.execute((ENGINE.parent/file).read_text(encoding='utf-8'))
+    # The scenario engine is PZDevKit.Scenario; the PZDevKit.Scenario global comes from PZDevKit's Compat.lua, as in the game.
+    sys.path.insert(0,str(ENGINE_TESTS))
+    from test_scenario_lua import runtime
+    vm=runtime()
+    vm.execute('assert(loadstring(readTests("test_engine.lua")))().setup(); require "PZDevKit/Scenario"; require "PZDevKit/Game"; require "PZDevKit/World"')
     cases=json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))
     suite=vm.execute((ROOT/'suite.lua').read_text(encoding='utf-8'))
     forbidden=['debugCompleteChapter','DEBUG_ADVANCE','DEBUG_START','DEBUG_RESET','Progress.','Plot.','Store.save','ModData.add','ModData.getOrCreate']
@@ -33,7 +34,7 @@ def main():
             step=a.steps[i]
             assert isinstance(step.label,str) and step.timeout>0 and step.timeout<40000
         assert 'return function(params)' in wrapper and ':run(' not in wrapper
-    globals_=['PZPuppet','ModData','isClient','isServer','isDebugEnabled','getCore','getWorld','print',
+    globals_=['PZDevKit','ModData','isClient','isServer','isDebugEnabled','getCore','getWorld','print',
               'getActivatedMods','getGameTime','getCell','instanceof','ISInventoryPaneContextMenu',
               'CharacterTrait','ISRadioAction','ISContextMenu','triggerEvent','getText','getTimestampMs',
               'Events','sendClientCommand','ISActivateGenerator','ISOpenCloseDoor','getZomboidRadio',
@@ -55,7 +56,7 @@ def main():
                 cursor=str(directory/part)
             return True
         assert any(exact(m) for m in matches),ref
-    installed=Path('C:/Users/cyber/Zomboid/Lua/PZPuppet/scenarios/OperationArtemis')
+    installed=Path(os.environ['USERPROFILE'])/'Zomboid/Lua/PZPuppet/scenarios/OperationArtemis'
     hashes={}
     for file in ROOT.glob('*.lua'):
         assert file.read_bytes()==(installed/file.name).read_bytes(),f'Loading copy differs: {file.name}'

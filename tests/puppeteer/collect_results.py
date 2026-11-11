@@ -1,21 +1,22 @@
-"""Archive real PZPuppeteer reports and per-run console tails. No game control or save writes."""
+"""Archive real scenario reports (PZDevKit.Scenario) and per-run console tails. No game control or save writes."""
 from pathlib import Path
 from datetime import datetime
 import argparse
 import hashlib
 import json
+import os
 import re
 import time
 import sys
 
 ROOT=Path(__file__).resolve().parent
-USER=Path('C:/Users/cyber/Zomboid')
-sys.path.insert(0,str(ROOT.parents[2]/'PZPuppeteer/tools'))
-from collect_reports import report_metadata, acknowledge, lua_errors
+USER=Path(os.environ['USERPROFILE'])/'Zomboid'
+sys.path.insert(0,str(ROOT.parents[2]/'PZDevKit/cli'))
+from pzdev.collect import report_metadata, acknowledge, lua_errors
 
 def run_command(command, save, resumed, parameters=None, options=None):
     """Rebuild only per-run guards; never carry an old save or resume into a new run."""
-    match=re.fullmatch(r'(PZPuppet\.runFile\("[^"]+",\{[^{}]*\})(?:,\{([^{}]*)\})?\)',command)
+    match=re.fullmatch(r'(PZDevKit\.Scenario\.runFile\("[^"]+",\{[^{}]*\})(?:,\{([^{}]*)\})?\)',command)
     if not match:
         raise ValueError('Unexpected command shape: '+command)
     fields=[f.strip() for f in (match.group(2) or '').split(',') if f.strip()
@@ -49,7 +50,7 @@ def completed_segment(segment, name, status):
 
 def write_results(manifest):
     (ROOT/'manifest.json').write_text(json.dumps(list(manifest.values()),ensure_ascii=False,indent=2),encoding='utf-8')
-    table=['# Campagne PZPuppeteer — Operation Artemis','',
+    table=['# Campagne PZDevKit — Operation Artemis','',
            'Statuts fondés sur les rapports de cette campagne; les erreurs restent à attribuer.','',
            '| Scénario | Préconditions | Commande | Résultat attendu | Résultat observé | Preuve | Statut |',
            '|---|---|---|---|---|---|---|']
@@ -120,7 +121,7 @@ def main():
                 # Preserve report metadata edited while a long game test is running.
                 manifest={r['scenario']:r for r in json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))}
                 row=manifest[case] if namespace=='OperationArtemis' else dict(
-                    command=f'PZPuppet.runFile("OperationArtemis/diagnostic_{case}.lua",{{playerIndex=0}})',
+                    command=f'PZDevKit.Scenario.runFile("OperationArtemis/diagnostic_{case}.lua",{{playerIndex=0}})',
                     preconditions='Solo debug 42.21; dedicated test save; see diagnostic source guards',
                     expected='Diagnostic observations only; a pass does not validate a nominal route')
                 environment=re.search(r'\[ArtemisPuppet\] \S+ save=(.*?) build=(\S+) act=',segment)

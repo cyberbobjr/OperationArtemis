@@ -1,18 +1,17 @@
 -- Plateau promotionnel : actions reelles, pas un test du parcours nominal.
--- PZPuppet.runFile("OperationArtemisTrailer/film.lua",{playerIndex=0})
-require "PZDirector/PZDirector_Core"
+-- PZDevKit.Scenario.runFile("OperationArtemisTrailer/film.lua",{playerIndex=0})
+require "PZDevKit/Production"
 require "RadioCom/ISRadioAction"
--- Never reload PZPuppet_Core from here: runFile is executing this file, and a reloaded
--- core makes its own factory check (getmetatable(scenario)==Scenario) fail.
--- Hot reload of the engine and production modules: PZDirector/tools/tournage.py --reload,
--- which reloads them in a separate request before runFile.
-assert(not PZPuppet.status() or PZPuppet.status().status~="running","Arreter la prise precedente")
-assert(PZDirector.production,"Module de production PZDirector non charge")
-assert(PZPuppet.Scenario.teleport,"Etapes de debug PZPuppet non chargees")
+-- Shot with `pzdev film source/promo/film.lua` (PZDevKit). Never reload PZDevKit/Scenario from here: runFile is
+-- executing this file, and a reloaded engine makes its own factory check (getmetatable(scenario)==Scenario) fail.
+-- To reload the engine, restart the test game.
+assert(not PZDevKit.Scenario.status() or PZDevKit.Scenario.status().status~="running","Arreter la prise precedente")
+assert(PZDevKit.Production.production,"Module de production PZDevKit non charge")
+assert(PZDevKit.Scenario.Scenario.teleport,"Etapes de debug PZDevKit.Scenario non chargees")
 
 return function(params)
     params=params or {}
-    local P,D=PZPuppet,PZDirector
+    local P,D=PZDevKit.Scenario,PZDevKit.Production
     local Story=require "Artemis/Artemis_Story"
     local Const=require "Artemis/Artemis_Const"
     local Smoke=require "SignalSmoke/SignalSmoke"

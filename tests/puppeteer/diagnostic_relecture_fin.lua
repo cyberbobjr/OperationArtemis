@@ -3,7 +3,7 @@
 -- Fermer manuellement après au moins 15 s; rendu et audio évalués par le joueur.
 return function(params)
     params=params or {}
-    local P=PZPuppet
+    local P=PZDevKit.Scenario
     local Ending,Journal
     local function state() return ModData.get("batman_Artemis") end
     local function choice(c) return state().flags.endingChoice[c.player:getUsername()] end

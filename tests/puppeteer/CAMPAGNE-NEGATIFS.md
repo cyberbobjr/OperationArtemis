@@ -11,7 +11,7 @@ Créer une nouvelle partie solo dédiée nommée `PZPuppet_Artemis_Negatifs`, m�
 Première commande, uniquement dans cette nouvelle partie :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/01_chargement_carnet.lua",{playerIndex=0})
+PZDevKit.Scenario.runFile("OperationArtemis/01_chargement_carnet.lua",{playerIndex=0})
 ```
 
 Le moteur et les scénarios sont déjà installés. Fermer la console et laisser le jeu tourner; attendre chaque rapport avant la commande suivante. Rejouer 01 à 08 par les véritables actions pour acquérir l'acte III. Le déplacement de préparation debug déjà documenté pour la base/les archives ne complète pas les objectifs. Les reprises `resume=true` des anciennes tentatives ne doivent pas être recopiées dans cette nouvelle partie.

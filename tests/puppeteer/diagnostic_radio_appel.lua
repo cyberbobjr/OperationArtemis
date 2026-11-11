@@ -4,5 +4,5 @@ return function(params)
     local p={}
     for k,v in pairs(params or {}) do p[k]=v end
     p.case="09_appel_helicoptere"; p.reportCase="radio_appel"; p.diagnostic=true
-    return PZPuppet.loadScenario("OperationArtemis/suite.lua",p)
+    return PZDevKit.Scenario.loadScenario("OperationArtemis/suite.lua",p)
 end

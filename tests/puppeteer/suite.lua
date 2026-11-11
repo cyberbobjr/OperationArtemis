@@ -2,7 +2,7 @@
 -- Real game execution required; static compilation is not an in-game result.
 return function(params)
     local case = assert(params.case, "case required")
-    local P, D = PZPuppet, PZPuppet.Debug
+    local P, D = PZDevKit.Scenario, PZDevKit.World
     local s = P.scenario((params.diagnostic==true and "ArtemisDiagnostic/" or "OperationArtemis/") .. (params.reportCase or case))
     local A = {}
     local function state() return ModData.get("batman_Artemis") end

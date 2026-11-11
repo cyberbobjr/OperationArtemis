@@ -40,7 +40,7 @@ description translations are maintained separately in `README.steam*`.
 | Required mod | [Signal Smoke](https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882), Mod ID `batman_SignalSmoke` |
 | Required mod | Belt Walkie-Talkie, Workshop 3817018338, Mod ID `batman_BeltRadio`: shared belt walkie-talkie behaviour |
 | Operation Artemis Mod ID | `batman_OperationArtemis` |
-| Test harness | PZPuppeteer, only when running the documented test campaign |
+| Test harness | PZDevKit (formerly PZPuppeteer), only when running the documented test campaign |
 
 Optional integrations are not required for the core helicopter, ferryman and
 checkpoint routes. They need separate validation; see the coverage below and

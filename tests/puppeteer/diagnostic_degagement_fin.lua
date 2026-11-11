@@ -3,7 +3,7 @@
 -- Deux zombies de fixture figés : proche retiré par le mod, témoin hors rayon conservé.
 return function(params)
     params=params or {}
-    local P,D=PZPuppet,PZPuppet.Debug
+    local P,D=PZDevKit.Scenario,PZDevKit.World
     local Ending,Safety
     local function state() return ModData.get("batman_Artemis") end
     local function present(z) return z~=nil and getCell():getZombieList():contains(z) end

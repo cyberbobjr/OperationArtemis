@@ -42,21 +42,21 @@ assert len(reload_plan)==1 and reload_plan[1].path.endswith('25_sauvegarde_recha
 
 # Build the actual wrapper and suite through the engine; execute no scenario callback.
 # Pure plan tests alone missed the nested loader guard encountered in the game.
-engine_root=ROOT.parents[2]/'PZPuppeteer'
-import importlib.util
-spec=importlib.util.spec_from_file_location('engine_contracts',engine_root/'tests/run_tests.py')
-engine_contracts=importlib.util.module_from_spec(spec); spec.loader.exec_module(engine_contracts)
+# The engine is PZDevKit.Scenario; the PZDevKit.Scenario global comes from PZDevKit's Compat.lua, as in the game.
+engine_tests=ROOT.parents[2]/'PZDevKit/tests'
+sys.path.insert(0,str(engine_tests))
+from test_scenario_lua import runtime as engine_runtime
 for case in ('01_chargement_carnet','25_sauvegarde_rechargee'):
-    engine_vm=engine_contracts.runtime()
-    tests=engine_vm.execute((engine_root/'tests/test_batch.lua').read_text(encoding='utf-8'))
+    engine_vm=engine_runtime()
+    tests=engine_vm.execute((engine_tests/'lua/test_batch.lua').read_text(encoding='utf-8'))
     tests.setup()
+    engine_vm.execute('require "PZDevKit/Scenario"; require "PZDevKit/Game"; require "PZDevKit/World"')
     engine_vm.globals().FILES['PZPuppet/scenarios/OperationArtemis/'+case+'.lua']=(ROOT/(case+'.lua')).read_text(encoding='utf-8')
     engine_vm.globals().FILES['PZPuppet/scenarios/OperationArtemis/suite.lua']=(ROOT/'suite.lua').read_text(encoding='utf-8')
-    engine_vm.execute('PZPuppet.Debug={}')
-    status=engine_vm.globals().PZPuppet.runFiles(engine_vm.table_from([engine_vm.table(path='OperationArtemis/'+case+'.lua')]))
+    status=engine_vm.globals().PZDevKit.Scenario.runFiles(engine_vm.table_from([engine_vm.table(path='OperationArtemis/'+case+'.lua')]))
     assert status.status=='running' and status.index==1
-    assert engine_vm.globals().PZPuppet.lastReport.name=='OperationArtemis/'+case
-    assert engine_vm.globals().PZPuppet.lastReport.steps[1].status=='pending'
+    assert engine_vm.globals().PZDevKit.Scenario.lastReport.name=='OperationArtemis/'+case
+    assert engine_vm.globals().PZDevKit.Scenario.lastReport.steps[1].status=='pending'
     assert engine_vm.globals().EXECUTED==0
 
 def file_integration(status='passed',namespace='OperationArtemis',outside_error=False,partial=False):
@@ -65,7 +65,7 @@ def file_integration(status='passed',namespace='OperationArtemis',outside_error=
         root.mkdir(); (user/'Lua/PZPuppet/reports').mkdir(parents=True)
         case='01_chargement_carnet' if namespace=='OperationArtemis' else 'porte_base'
         name=namespace+'/'+case
-        row=dict(scenario=case,command=f'PZPuppet.runFile("OperationArtemis/{case}.lua",{{playerIndex=0}})',
+        row=dict(scenario=case,command=f'PZDevKit.Scenario.runFile("OperationArtemis/{case}.lua",{{playerIndex=0}})',
                  preconditions='dedicated game',expected='actual action',observed='not executed',proof='none',status='non executed')
         (root/'manifest.json').write_text(json.dumps([row]),encoding='utf-8')
         raw=(f'PZPuppet 0.1.0\n{name} : {status}\nRun token: 100-2\nBatch token: 100-1\n'

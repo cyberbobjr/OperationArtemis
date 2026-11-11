@@ -1,10 +1,10 @@
-# Campagne solo Operation Artemis / PZPuppeteer
+# Campagne solo Operation Artemis / PZDevKit (ex-PZPuppeteer)
 
 Accès direct : [tableau des scénarios](RESULTATS.md), [index des rapports et preuves](reports/README.md), [bugs corrigés et encore ouverts](reports/BUGS.md). Les preuves brutes sont rangées dans `reports/runs/`, les pièces avant correctif dans `reports/fixes/`, les contrôles hors jeu dans `reports/inspection/` et les captures isolées dans `reports/snapshots/`.
 
 Préparée le 2026-10-03 pour **42.21.0**. Surveillance en jeu commencée le même jour : le premier essai de 01 s’est arrêté sur la garde du nom de sauvegarde, avant toute action de préparation ou de progression. Consulter le tableau pour les résultats réels à jour. Cette session ne dispose pas de contrôle natif de la console du jeu; les commandes sont collées par le joueur.
 
-Sources conservées ici; copies installées sous `C:/Users/cyber/Zomboid/Lua/PZPuppet/scenarios/OperationArtemis/`. `suite.lua` contient les adaptateurs, chaque fichier numéroté retourne une fabrique neuve via `PZPuppet.loadScenario`. Le chargement ne lance rien, n’ajoute aucun événement et n’importe aucun module du mod. L’exécution ajoute temporairement les seuls observateurs nécessaires, retirés dans `finally`.
+Sources conservées ici; copies installées sous `%USERPROFILE%/Zomboid/Lua/PZPuppet/scenarios/OperationArtemis/`. `suite.lua` contient les adaptateurs, chaque fichier numéroté retourne une fabrique neuve via `PZDevKit.Scenario.loadScenario`. Le chargement ne lance rien, n’ajoute aucun événement et n’importe aucun module du mod. L’exécution ajoute temporairement les seuls observateurs nécessaires, retirés dans `finally`.
 
 Le [tableau complet](RESULTATS.md) donne les 31 commandes, les préconditions, les attendus, les observations, les preuves et les statuts. Chaque scénario a aussi son fichier sous `reports/`.
 
@@ -14,25 +14,25 @@ Le collecteur archive également les scénarios `ArtemisDiagnostic/` séparémen
 
 **Les nouveaux parcours utilisent maintenant un plan séquentiel** : voir [CAMPAGNES.md](CAMPAGNES.md). Après redémarrage complet avec les nouvelles sources, lancer le collecteur puis une seule commande `runBatchFile` pour 01–08, les négatifs compatibles et la fin choisie. Chaque enfant garde ses actions réelles et son propre rapport ; erreur, annulation ou archive refusée arrêtent la suite. Les anciennes instructions `runFile` ci-dessous restent utiles pour les reprises explicites, mais ne constituent plus la procédure recommandée d’une nouvelle campagne.
 
-1. Lancer le jeu avec `-debug`. Activer **batman_OperationArtemis**, sa dépendance obligatoire **batman_SignalSmoke**, et **batman_PZPuppeteer**. Les projets locaux sont chargeables directement : ne rien copier dans le Workshop Steam. Redémarrer complètement.
+1. Lancer le jeu avec `-debug`. Activer **batman_OperationArtemis**, sa dépendance obligatoire **batman_SignalSmoke**, et **batman_PZDevKit** (DEV-ONLY, projet `PZDevKit` ; moteur `PZDevKit.Scenario`, qui remplace PZPuppeteer depuis le 2026-11-11). Les projets locaux sont chargeables directement : ne rien copier dans le Workshop Steam. Redémarrer complètement.
 2. Créer une **nouvelle** partie Sandbox, nommée par exemple **PZPuppet_Artemis_Helicoptere**. Toutes les fabriques exigent ce préfixe ou un nom exact déclaré par testSave, et refusent client/serveur. Personnage vivant, lettré, non sourd, hors véhicule, file d’actions vide. Une journée de **60 minutes** convient à la préparation, mais n'est pas une précondition obligatoire des transports ; relever la durée réelle dans le rapport. Intensité normale, réseau électrique encore actif. Préparer nourriture, eau, lumière et équipement de combat. Ne pas activer d’actions instantanées. La mortalité et la fatigue restent réelles; un décès annule le test.
 3. Pour la campagne de base, désactiver stérilisation, mods de bateaux, Vaccine et transport Military Drop. Choisir les cartes optionnelles dès la création pour leurs campagnes séparées, avec leurs dépendances. Ne pas activer tous les fournisseurs de bateaux simultanément pour le premier essai.
 4. Démarrer la surveillance **avant** le jeu, dans un terminal PowerShell :
 
 ```powershell
-python C:/Users/cyber/Zomboid/Workshop/OperationArtemis/tests/puppeteer/collect_results.py --watch
+python OperationArtemis/tests/puppeteer/collect_results.py --watch
 ```
 
 5. Console Lua, première commande exacte :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/01_chargement_carnet.lua",{playerIndex=0})
+PZDevKit.Scenario.runFile("OperationArtemis/01_chargement_carnet.lua",{playerIndex=0})
 ```
 
 Si la nouvelle partie dédiée reçoit un nom automatique, indiquer son nom exact dans le troisième argument, pour **chaque** scénario. Le nom est comparé strictement à `getWorld():getWorld()`; aucun joker ou changement de sauvegarde n’est effectué. Exemple pour la partie de test créée pendant cette campagne :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/01_chargement_carnet.lua",{playerIndex=0},{testSave="2026-10-03_18-48-28"})
+PZDevKit.Scenario.runFile("OperationArtemis/01_chargement_carnet.lua",{playerIndex=0},{testSave="2026-10-03_18-48-28"})
 ```
 
 Ce paramètre désigne explicitement une partie de test dédiée; ne jamais y indiquer une sauvegarde personnelle. La fabrique est relue depuis le disque à chaque `runFile`, sans rechargement Lua global.
@@ -44,9 +44,9 @@ Avant chaque lecture, le scénario vérifie `tooDarkToRead`. Si nécessaire, il 
 Fermer la console, reprendre à vitesse normale et laisser les commandes de mouvement tranquilles. Après le rapport et son archivage, lancer **02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10**, une commande à la fois. Si 05 ouvre `ch4_lab`, insérer **20** avant 06. Utiliser les commandes du tableau, sans copier plusieurs appels ensemble : le moteur refuse les scénarios concurrents.
 
 ```lua
-PZPuppet.printStatus()
+PZDevKit.Scenario.printStatus()
 -- arrêt volontaire (rapport cancelled, traduit échoué/interrompu dans le tableau) :
-PZPuppet.stop()
+PZDevKit.Scenario.stop()
 ```
 
 **Ne pas poursuivre après une précondition manquante ou une nouvelle erreur Lua.** L’archivage conserve le rapport brut du moteur, le contexte de console propre au scénario, les erreurs nouvelles et le contexte antérieur. Une erreur d’un autre mod reste à attribuer séparément. Les erreurs à `f:0`, la variante chargée, les remplacements et la version doivent être examinés au démarrage : une réussite du moteur n’efface pas une initialisation interrompue.
@@ -73,7 +73,7 @@ Les tests 10/12 règlent l’heure à 4 h 57 **avant** le créneau et placent le
 Pour **19** ou **22**, préparer une nouvelle branche avec le dossier encore **non lu**, tout en progressant normalement :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/07_archives_portique.lua",{playerIndex=0},{deferDossierRead=true})
+PZDevKit.Scenario.runFile("OperationArtemis/07_archives_portique.lua",{playerIndex=0},{deferDossierRead=true})
 ```
 
 Puis 08. Pour 19, régler `SterilizationDays=1` **à la création**, maintenir le personnage vivant et éveillé et laisser la journée s’écouler normalement (timeout 6 000 s). Le scénario lit le dossier et attend la frappe sans changer `deadlineHours`. Pour 22, activer Siege Night et le contrôle Artemis avant création. Le scénario vérifie la programmation du siège et les options inchangées; son déroulement réel et la suspension pendant une extraction exigent une procédure complémentaire.
@@ -81,7 +81,7 @@ Puis 08. Pour 19, régler `SterilizationDays=1` **à la création**, maintenir l
 **21** vérifie les véritables données du CD de la clinique; le portable est ajouté avec :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/21_computer_contenus.lua",{playerIndex=0},{laptop=true})
+PZDevKit.Scenario.runFile("OperationArtemis/21_computer_contenus.lua",{playerIndex=0},{laptop=true})
 ```
 
 La base doit déjà être révélée et les objets encore dans leurs classeurs. Ce test inspecte les contenus réellement posés; lecture des notes à l’écran et premier démarrage Computer Mod restent manuels. **23** attend un vrai prélèvement/analyse Vaccine au poste, réalisé par le joueur. Le menu intégré « test de l’armée » est absent quand Vaccine est actif; ne pas appeler directement sa logique serveur pour fabriquer un résultat.
@@ -114,13 +114,13 @@ Les progressions, scènes, poses du mod, morts, objets consommés, dégâts, pas
 Pour le contrôle de rechargement 25, enregistrer une vraie référence **dans un état stable avant** de sauvegarder et quitter :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/31_reference_rechargement.lua",{playerIndex=0})
+PZDevKit.Scenario.runFile("OperationArtemis/31_reference_rechargement.lua",{playerIndex=0})
 ```
 
 Sauvegarder immédiatement via le jeu, redémarrer complètement puis lancer :
 
 ```lua
-PZPuppet.runFile("OperationArtemis/25_sauvegarde_rechargee.lua",{playerIndex=0})
+PZDevKit.Scenario.runFile("OperationArtemis/25_sauvegarde_rechargee.lua",{playerIndex=0})
 ```
 
 ## Préparation et contrôles statiques
@@ -128,16 +128,16 @@ PZPuppet.runFile("OperationArtemis/25_sauvegarde_rechargee.lua",{playerIndex=0})
 Après l'échec du premier 14 sur le trajet du pont, la reprise ne rejoue pas la quarantaine. Elle exige une entrée `passed`, la voie ouverte, l'acte 3 et le personnage à pied sur l'approche sud. Les points déjà dépassés vers le nord sont ignorés; les déplacements restants utilisent les actions vanilla. La première tentative échouée reste archivée séparément.
 
 ```lua
-PZPuppet.runFile("OperationArtemis/14_fin_checkpoint.lua",{playerIndex=0,manualStop=false},{testSave="2026-10-03_18-48-28",resume=true})
+PZDevKit.Scenario.runFile("OperationArtemis/14_fin_checkpoint.lua",{playerIndex=0,manualStop=false},{testSave="2026-10-03_18-48-28",resume=true})
 ```
 
 Fermer la console et garder la vitesse normale pendant la marche. L'écran de fin, s'il apparaît réellement, est observé et attend désormais le clic du joueur sur Continuer. `autoContinue=true` dans les paramètres réactive explicitement le clic automatique après 12 secondes. La reprise n'est validée qu'après son rapport réel.
 
 ```powershell
-python C:/Users/cyber/Zomboid/Workshop/OperationArtemis/tests/puppeteer/verify.py
+python OperationArtemis/tests/puppeteer/verify.py
 ```
 
-Pour installer ou mettre à jour les scénarios, copier les fichiers `.lua` de ce dossier vers `C:/Users/cyber/Zomboid/Lua/PZPuppet/scenarios/OperationArtemis/`, après sauvegarde de chaque copie installée qui diffère. Conserver `manifest.json` et les résultats actuels. Le générateur initial et les scripts ponctuels de migration/enregistrement ont été supprimés après la campagne : leurs valeurs historiques pouvaient écraser les métadonnées affinées pendant les tests.
+Pour installer ou mettre à jour les scénarios, copier les fichiers `.lua` de ce dossier vers `%USERPROFILE%/Zomboid/Lua/PZPuppet/scenarios/OperationArtemis/`, après sauvegarde de chaque copie installée qui diffère. Conserver `manifest.json` et les résultats actuels. Le générateur initial et les scripts ponctuels de migration/enregistrement ont été supprimés après la campagne : leurs valeurs historiques pouvaient écraser les métadonnées affinées pendant les tests.
 
 La référence est un compte rendu texte sous `Lua/PZPuppet/OperationArtemis-reload-reference.txt`, lié au nom de partie. Le test vérifie acte, chapitre, évasion, lecture du dossier, fin et choix Continuer. La révision doit augmenter : `Artemis_Server` appelle `Store.save` à l’initialisation, qui incrémente légitimement ce compteur. Le test ne demande donc pas son identité stricte. Il ne valide pas à lui seul toutes les poses, radios, alarmes, effets ou phases de transport.
 
