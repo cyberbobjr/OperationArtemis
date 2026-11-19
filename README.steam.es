@@ -49,7 +49,7 @@ Activa Operation Artemis y [url=https://steamcommunity.com/sharedfiles/filedetai
 
 [h2]A TENER EN CUENTA[/h2]
 
-Project Zomboid Build 42.21. Probado en solitario; el multijugador y las integraciones opcionales aún necesitan su propia validación. Textos de la historia en español, inglés, francés, alemán, portugués, portugués de Brasil, ruso, turco, chino, japonés y coreano (en chino, japonés y coreano, los documentos del juego quedan en inglés). Finales con voz en inglés y francés.
+Project Zomboid Build 42.22. Probado en solitario; el multijugador y las integraciones opcionales aún necesitan su propia validación. Textos de la historia en español, inglés, francés, alemán, portugués, portugués de Brasil, ruso, turco, chino, japonés y coreano (en chino, japonés y coreano, los documentos del juego quedan en inglés). Finales con voz en inglés y francés.
 
 Requiere [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3811010882][b]Signal Smoke[/b][/url]: el humo verde y las bengalas que marcan los puntos de encuentro de la historia.
 

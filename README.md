@@ -4,7 +4,7 @@
 
 **Survival was only the beginning.**
 
-A story-driven end-game scenario for **Project Zomboid Build 42.21**. A notebook
+A story-driven end-game scenario for **Project Zomboid Build 42.22**. A notebook
 taken from a military infected, a coded broadcast and someone called V lead you
 across Knox County. Follow the evidence, uncover Operation Artemis and find a
 way out of the Exclusion Zone.
